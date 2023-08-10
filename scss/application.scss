@@ -1,6 +1,7 @@
 /* The sidebar menu */
 
 .sidenav {
+  display: none;
   height: 100vh;
   width: 130px;
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -62,4 +63,10 @@
   width: 20px;
   padding: 20px 10px;
   filter: invert(77%) sepia(94%) saturate(334%) hue-rotate(104deg) brightness(91%) contrast(93%);
+}
+
+@media (min-width: 576px) {
+  .sidenav {
+    display: block;
+  }
 }
