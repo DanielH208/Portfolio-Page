@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+html {
+  font-family: "Poppins";
+}
+
+main {
+  background-color: black;
+  color: #e8e6e3;
+}
+
 .sidenav {
   display: none;
   height: 100vh;
@@ -68,6 +79,7 @@
   position: relative;
   text-align: center;
   color: white;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 #about-me-image-container {
@@ -121,7 +133,7 @@
 }
 
 .container {
-  margin: 40px 10px;
+  padding: 40px 20px;
 }
 
 #portfolio-row {
@@ -135,13 +147,17 @@
   flex-grow: 1;
   width: 100%;
   height: 100%;
-  margin: 20px 10px;
+  padding-bottom: 20px;
+  background-color: #1a1c26;
+  margin-bottom: 20px;
+  border-radius: 0px 0px 3px 3px;
 }
 
 .portfolio-row-item > img {
   width: 100%;
   object-fit: cover;
   height: 80%;
+  border-radius: 3px 3px 0px 0px;
 }
 
 .portfolio-row-item > h4 {
@@ -151,6 +167,42 @@
 
 .portfolio-row-item > a {
   font-size: 10px;
+  color: #e8e6e3;
+}
+
+.portfolio-row-item > h4, .portfolio-row-item > a {
+  padding-left: 10px;
+}
+
+#scion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.scion-column {
+  width: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+#scion-container {
+  padding: 40px;
+  background-color: #292b37;
+}
+
+#about-treehouse > p > a {
+  color: #e8e6e3;
+  text-decoration: underline;
+}
+
+.scion-column > h1 {
+  font-size: 30px;
+  color: white;
+}
+
+.scion-column > p {
+  font-size: 20px;
 }
 
 @media (min-width: 576px) {
@@ -170,20 +222,43 @@
     font-size: 20px;
   }
   .container {
-    margin: 40px 40px;
+    padding: 40px 40px;
   }
 }
 @media (min-width: 768px) {
   .portfolio-row-item {
-    width: 46.4%;
+    width: 45%;
+  }
+  #portfolio-row-item-one, #portfolio-row-item-three, #portfolio-row-item-five {
+    margin-right: 20px;
   }
 }
 @media (min-width: 992px) {
-  .portfolio-row-item {
-    width: 30%;
-  }
   .container {
-    margin: 80px 40px;
+    padding: 80px 40px;
+  }
+  .scion-column {
+    width: 40%;
+  }
+  #scion-intro {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .scion-column {
+    width: 27%;
+  }
+  #about-netmatters {
+    margin-right: 20px;
+  }
+  .portfolio-row-item {
+    width: 29%;
+  }
+  #portfolio-row-item-two, #portfolio-row-item-four {
+    margin-right: 20px;
+  }
+  #portfolio-row-item-three {
+    margin-right: 0px;
   }
 }
 
