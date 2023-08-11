@@ -174,6 +174,11 @@ main {
   padding-left: 10px;
 }
 
+#coding-examples > h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
 #scion {
   display: flex;
   flex-direction: row;
