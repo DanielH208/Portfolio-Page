@@ -24,7 +24,11 @@ body {
 h1 {
   margin: 0px;
 }
-
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
 /* HTML5 display definitions
    ========================================================================== */
 

@@ -120,6 +120,39 @@
   -webkit-transform: rotate(45deg);
 }
 
+.container {
+  margin: 40px 10px;
+}
+
+#portfolio-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.portfolio-row-item {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  margin: 20px 10px;
+}
+
+.portfolio-row-item > img {
+  width: 100%;
+  object-fit: cover;
+  height: 80%;
+}
+
+.portfolio-row-item > h4 {
+  margin: 5px 0px;
+  font-size: 20px;
+}
+
+.portfolio-row-item > a {
+  font-size: 10px;
+}
+
 @media (min-width: 576px) {
   .sidenav {
     display: block;
@@ -135,6 +168,22 @@
   }
   #about-me-content-container > h3 {
     font-size: 20px;
+  }
+  .container {
+    margin: 40px 40px;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio-row-item {
+    width: 46.4%;
+  }
+}
+@media (min-width: 992px) {
+  .portfolio-row-item {
+    width: 30%;
+  }
+  .container {
+    margin: 80px 40px;
   }
 }
 
