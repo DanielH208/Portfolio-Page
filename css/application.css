@@ -175,6 +175,10 @@ main {
   padding-left: 10px;
 }
 
+#portfolio-row li:hover {
+  filter: brightness(50%);
+}
+
 #coding-examples > h1 {
   text-align: center;
   font-size: 50px;

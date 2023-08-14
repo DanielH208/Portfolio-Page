@@ -189,6 +189,11 @@ main {
   padding-left: 10px;
 }
 
+
+#portfolio-row li:hover {
+  filter:brightness(50%)
+}
+
 // CODING EXAMPLES
 
 #coding-examples > h1 {
