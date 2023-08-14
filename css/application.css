@@ -17,14 +17,15 @@ main {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  border-right: solid 3px turquoise;
+  border-right: solid 3px #0b7029;
   overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #1a1c26;
   padding-top: 20px;
 }
 
 #sidenav-options a:hover {
   text-decoration: underline;
-  text-decoration-color: turquoise;
+  text-decoration-color: #0b7029;
   text-underline-offset: 8px;
   text-decoration-thickness: 2px;
 }
@@ -33,8 +34,8 @@ main {
   padding-bottom: 20px;
   text-align: center;
   font-size: 25px;
-  color: turquoise;
-  border-bottom: solid 3px turquoise;
+  color: #0b7029;
+  border-bottom: solid 3px #0b7029;
 }
 
 #sidenav-options {
@@ -47,13 +48,13 @@ main {
   font-size: 11px;
   text-align: center;
   padding-bottom: 30px;
-  color: black;
+  color: #e8e6e3;
   text-decoration-line: none;
 }
 
 #sidenav-options-contact {
-  border-top: solid 3px turquoise;
-  border-bottom: solid 3px turquoise;
+  border-top: solid 3px #0b7029;
+  border-bottom: solid 3px #0b7029;
   padding: 10px;
 }
 
@@ -70,7 +71,7 @@ main {
   display: inline;
   width: 20px;
   padding: 20px 10px;
-  filter: invert(77%) sepia(94%) saturate(334%) hue-rotate(104deg) brightness(91%) contrast(93%);
+  filter: invert(27%) sepia(94%) saturate(459%) hue-rotate(86deg) brightness(98%) contrast(93%);
 }
 
 #about-me {
