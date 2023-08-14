@@ -198,6 +198,7 @@ main {
 
 #about-treehouse > p > a {
   color: #e8e6e3;
+  overflow-wrap: break-word;
   text-decoration: underline;
 }
 
@@ -208,6 +209,48 @@ main {
 
 .scion-column > p {
   font-size: 20px;
+}
+
+#form-section-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form-section {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.form-elements {
+  padding-bottom: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 98%;
+  background-color: lightgrey;
+  color: black;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+
+#form-textarea {
+  width: 98.3%;
+  margin-bottom: 10px;
+  background-color: lightgrey;
+  color: black;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+
+#submit-button {
+  width: 150px;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 6px;
+  color: black;
 }
 
 @media (min-width: 576px) {
@@ -248,6 +291,22 @@ main {
   #scion-intro {
     margin-right: 20px;
   }
+  #form-info {
+    width: 30%;
+    flex-grow: 1;
+    margin-right: 40px;
+  }
+  #form-container {
+    width: 64%;
+    flex-grow: 1;
+    padding-top: 15px;
+  }
+  #form-firstname, #form-lastname {
+    width: 45.6%;
+  }
+  #form-firstname {
+    margin-right: 20px;
+  }
 }
 @media (min-width: 1200px) {
   .scion-column {
@@ -264,6 +323,22 @@ main {
   }
   #portfolio-row-item-three {
     margin-right: 0px;
+  }
+  #form-section-container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #form-firstname, #form-lastname {
+    width: 46.5%;
+  }
+}
+@media (min-width: 1600px) {
+  #form-section-container {
+    width: 1400px;
+  }
+  #form-firstname, #form-lastname {
+    width: 47.3%;
   }
 }
 
