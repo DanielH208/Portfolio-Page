@@ -1,0 +1,7 @@
+@use "../base/placeholders";
+
+// FORM
+
+#submit-button {
+    @extend %btn;
+  }
