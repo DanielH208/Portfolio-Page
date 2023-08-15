@@ -173,8 +173,10 @@ footer h3 {
 
 .sidenav {
   display: none;
-  height: 100vh;
   width: 130px;
+  height: 100vh;
+  padding: 20px 0px 0px 0px;
+  margin: 0px;
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -182,7 +184,6 @@ footer h3 {
   border-right: solid 3px #0b7029;
   overflow-x: hidden; /* Disable horizontal scroll */
   background-color: #1a1c26;
-  padding-top: 20px;
 }
 
 #sidenav-options {
@@ -194,10 +195,21 @@ footer h3 {
   text-align: center;
 }
 
-#form-section-container {
+#scion, #portfolio-row, #form-section-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+#submit-button {
+  width: 150px;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 6px;
+  color: black;
+}
+
+#form-section-container {
   width: 100%;
 }
 
@@ -246,10 +258,21 @@ footer h3 {
   transform: translate(-50%, -50%);
 }
 
-#portfolio-row {
+#scion, #form-section-container, #portfolio-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+#submit-button {
+  width: 150px;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 6px;
+  color: black;
+}
+
+#portfolio-row {
   width: 100%;
 }
 
@@ -257,16 +280,24 @@ footer h3 {
   flex-grow: 1;
   width: 100%;
   height: 100%;
-  padding-bottom: 20px;
+  padding: 0px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
   background-color: #1a1c26;
-  margin-bottom: 20px;
   border-radius: 0px 0px 3px 3px;
 }
 
-#scion {
+#form-section-container, #portfolio-row, #scion {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+#submit-button {
+  width: 150px;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 6px;
+  color: black;
 }
 
 .scion-column {
@@ -310,6 +341,12 @@ footer h3 {
 
 #scroll-up {
   text-align: center;
+}
+
+#form-section-container, #portfolio-row, #scion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #submit-button {

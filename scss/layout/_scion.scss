@@ -1,9 +1,9 @@
+@use "../base/placeholders";
+
 // SCION 
 
 #scion {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @extend %flex-row-container;
 }
   
   

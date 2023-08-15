@@ -1,14 +1,10 @@
 // ARROW DOWN
+@use "../base/mixins" as mixin;
+
 
 .arrow-down {
-    border: solid white;
-    border-width: 0 6px 6px 0;
-    display: inline-block;
-    padding: 6px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    @include mixin.arrow(45deg);
 }
-
   
 #about-me-scroll-down {
     position: absolute;
@@ -24,12 +20,7 @@
 // ARROW UP
 
 .arrow-up {
-    border: solid white;
-    border-width: 0 6px 6px 0;
-    display: inline-block;
-    padding: 6px;
-    transform: rotate(225deg);
-    -webkit-transform: rotate(225deg);
+    @include mixin.arrow(225deg);
     align-items: center;
     margin-bottom: 20px;
 }

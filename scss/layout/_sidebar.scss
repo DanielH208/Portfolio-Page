@@ -1,7 +1,9 @@
+@use "../base/mixins" as mixin;
+
+
 .sidenav {
     display: none;
-    height: 100vh;
-    width: 130px;
+    @include mixin.size(130px, 100vh, 20px 0px 0px 0px, 0px);
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -9,12 +11,11 @@
     border-right: solid 3px $accent;
     overflow-x: hidden; /* Disable horizontal scroll */
     background-color: #1a1c26;
-    padding-top: 20px;
   }
 
 #sidenav-options {
-margin: 15px;
-padding-top: 40px;
+  margin: 15px;
+  padding-top: 40px;
 }
 
   
