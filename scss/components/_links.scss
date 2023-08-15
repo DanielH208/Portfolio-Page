@@ -1,0 +1,52 @@
+// SIDENAV
+
+#sidenav-header > a {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: #0b7029;
+    border-bottom: solid 3px #0b7029;
+}
+
+.sidenav a {
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #e8e6e3;
+    text-decoration-line: none;
+}
+
+#sidenav-social > a {
+    display: inline;
+    padding: 0px;
+}
+
+// PORTFOLIO 
+
+.portfolio-row-item > a {
+    font-size: 10px;
+    color: #e8e6e3;
+}
+  
+.portfolio-row-item > h4 , .portfolio-row-item > a {
+    padding-left: 10px;
+}
+
+// ABOUT
+
+#about-treehouse > p > a {
+    color: #e8e6e3;
+    overflow-wrap: break-word;
+    text-decoration: underline;
+}
+
+
+// FOOTER
+
+footer a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+}

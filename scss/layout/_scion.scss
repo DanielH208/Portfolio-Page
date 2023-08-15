@@ -1,0 +1,19 @@
+// SCION 
+
+#scion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+  
+.scion-column {
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#scion-container {
+    padding: 40px;
+    background-color: #292b37;
+}
