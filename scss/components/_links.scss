@@ -4,8 +4,8 @@
     padding-bottom: 20px;
     text-align: center;
     font-size: 25px;
-    color: #0b7029;
-    border-bottom: solid 3px #0b7029;
+    color: $accent;
+    border-bottom: solid 3px $accent;
 }
 
 .sidenav a {
@@ -13,7 +13,7 @@
     font-size: 11px;
     text-align: center;
     padding-bottom: 30px;
-    color: #e8e6e3;
+    color: $text;
     text-decoration-line: none;
 }
 
@@ -26,7 +26,7 @@
 
 .portfolio-row-item > a {
     font-size: 10px;
-    color: #e8e6e3;
+    color: $text
 }
   
 .portfolio-row-item > h4 , .portfolio-row-item > a {
@@ -36,7 +36,7 @@
 // ABOUT
 
 #about-treehouse > p > a {
-    color: #e8e6e3;
+    color: $text;
     overflow-wrap: break-word;
     text-decoration: underline;
 }

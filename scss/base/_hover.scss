@@ -1,10 +1,13 @@
+@use "typography";
+
+
 #sidenav-options a:hover {
     text-decoration: underline;
-    text-decoration-color: #0b7029;
+    text-decoration-color: typography.$accent;
     text-underline-offset: 8px;
     text-decoration-thickness: 2px;
 }
 
 #portfolio-row li:hover {
     filter:brightness(50%)
-}
+} 
