@@ -29,6 +29,10 @@ input {
     border-radius: 3px;
 }
 
+h1 {
+  padding: 20px 10px;
+}
+
 footer {
     background-color: $main-background;
 }
@@ -84,6 +88,11 @@ footer h3 {
 .portfolio-row-item > h4 {
     margin: 5px 0px;
     font-size: 20px;
+}
+
+#form-info > h1 {
+  font-size: 32px;
+  padding: 0px;
 }
 
 
