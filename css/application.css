@@ -454,7 +454,7 @@ footer a {
 }
 @media (max-width: 575px) {
   #about-me-content-container > h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   #about-me-content-container > h2 {
     font-size: 20px;
@@ -464,6 +464,9 @@ footer a {
   }
   #about-me-content-container {
     width: 90%;
+  }
+  h2 {
+    margin-top: 0px;
   }
 }
 @media (min-width: 768px) {
@@ -547,10 +550,10 @@ footer a {
     width: 46.5%;
   }
   #about-me-content-container > h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
   #about-me-content-container > h2 {
-    font-size: 50px;
+    font-size: 45px;
   }
   #about-me-content-container > h3 {
     font-size: 45px;
@@ -570,10 +573,10 @@ footer a {
     width: 47.3%;
   }
   #about-me-content-container > h1 {
-    font-size: 90px;
+    font-size: 80px;
   }
   #about-me-content-container > h2 {
-    font-size: 55px;
+    font-size: 54px;
   }
   #about-me-content-container > h3 {
     font-size: 50px;
