@@ -31,13 +31,13 @@ footer h3 {
 }
 
 #about-me-content-container > h1 {
-  font-size: 25px;
+  font-size: 100px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
 #about-me-content-container > h2 {
-  font-size: 15px;
+  font-size: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
@@ -121,13 +121,13 @@ footer h3 {
 }
 
 #about-me-content-container > h1 {
-  font-size: 25px;
+  font-size: 100px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
 #about-me-content-container > h2 {
-  font-size: 15px;
+  font-size: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
@@ -237,7 +237,7 @@ footer h3 {
 
 #about-me {
   width: 100%;
-  height: 40vh;
+  height: 100vh;
   position: relative;
   text-align: center;
   color: white;
@@ -246,7 +246,7 @@ footer h3 {
 
 #about-me-image-container {
   width: 100%;
-  height: 40vh;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -323,7 +323,7 @@ footer h3 {
 #about-me-scroll-down {
   position: absolute;
   font-size: 15px;
-  top: 90%;
+  top: 96%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -418,17 +418,34 @@ footer a {
   footer {
     margin-left: 130px;
   }
+  .container {
+    padding: 40px 40px;
+  }
   #about-me-content-container > h1 {
     font-size: 50px;
   }
   #about-me-content-container > h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
   #about-me-content-container > h3 {
     font-size: 20px;
   }
-  .container {
-    padding: 40px 40px;
+  #about-me-content-container {
+    width: 90%;
+  }
+}
+@media (max-width: 575px) {
+  #about-me-content-container > h1 {
+    font-size: 40px;
+  }
+  #about-me-content-container > h2 {
+    font-size: 20px;
+  }
+  #about-me-content-container > h3 {
+    font-size: 15px;
+  }
+  #about-me-content-container {
+    width: 90%;
   }
 }
 @media (min-width: 768px) {
@@ -437,6 +454,15 @@ footer a {
   }
   #portfolio-row-item-one, #portfolio-row-item-three, #portfolio-row-item-five {
     margin-right: 20px;
+  }
+  #about-me-content-container > h1 {
+    font-size: 60px;
+  }
+  #about-me-content-container > h2 {
+    font-size: 35px;
+  }
+  #about-me-content-container > h3 {
+    font-size: 25px;
   }
 }
 @media (min-width: 992px) {
@@ -465,6 +491,15 @@ footer a {
   #form-firstname {
     margin-right: 20px;
   }
+  #about-me-content-container > h1 {
+    font-size: 60px;
+  }
+  #about-me-content-container > h2 {
+    font-size: 40px;
+  }
+  #about-me-content-container > h3 {
+    font-size: 30px;
+  }
 }
 @media (min-width: 1200px) {
   .scion-column {
@@ -490,6 +525,18 @@ footer a {
   #form-firstname, #form-lastname {
     width: 46.5%;
   }
+  #about-me-content-container > h1 {
+    font-size: 80px;
+  }
+  #about-me-content-container > h2 {
+    font-size: 50px;
+  }
+  #about-me-content-container > h3 {
+    font-size: 45px;
+  }
+  #about-me-content-container {
+    width: 80%;
+  }
 }
 @media (min-width: 1600px) {
   #form-section-container {
@@ -497,6 +544,18 @@ footer a {
   }
   #form-firstname, #form-lastname {
     width: 47.3%;
+  }
+  #about-me-content-container > h1 {
+    font-size: 90px;
+  }
+  #about-me-content-container > h2 {
+    font-size: 55px;
+  }
+  #about-me-content-container > h3 {
+    font-size: 50px;
+  }
+  #about-me-content-container {
+    width: 70%;
   }
 }
 
