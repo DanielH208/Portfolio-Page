@@ -1,0 +1,26 @@
+@use "../base/placeholders";
+
+// FORM 
+
+#form-section-container {
+    @extend %flex-row-container;
+    width: 100%;
+}
+
+.form-section {
+    word-break: break-all;
+    white-space: normal;
+}
+
+.form-elements {
+    padding-bottom: 10px;
+}
+
+#form-textarea {
+  width: 98.3%;
+  margin-bottom: 10px;
+  background-color: lightgrey;
+  color: $main-background;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}

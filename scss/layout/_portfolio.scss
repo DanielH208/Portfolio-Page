@@ -1,0 +1,17 @@
+@use "../base/placeholders";
+@use "../base/mixins" as mixin;
+
+// Portfolio 
+
+#portfolio-row {
+    @extend %flex-row-container;
+    width: 100%;
+}
+
+.portfolio-row-item {
+    flex-grow: 1;
+    @include mixin.size(100%, 100%, 0px 0px 20px 0px, 0px 0px 20px 0px);
+    background-color: #1a1c26;
+    border-radius: 0px 0px 3px 3px;
+  
+}

@@ -1,0 +1,19 @@
+@use "../base/placeholders";
+
+// SCION 
+
+#scion {
+    @extend %flex-row-container;
+}
+  
+  
+.scion-column {
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#scion-container {
+    padding: 40px;
+    background-color: #292b37;
+}

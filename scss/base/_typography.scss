@@ -1,0 +1,118 @@
+// HTML ELEMENTS
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+// COLOR VARIABLES 
+
+$text: #e8e6e3;
+$accent: #0b7029;
+$main-background: black;
+
+
+html {
+  font-family: "Poppins";
+}
+
+main {
+  background-color: $main-background;
+  color: $text;
+}
+
+
+input {
+    margin-bottom: 10px;
+    width: 98%;
+    background-color: lightgrey;
+    color: $main-background;
+    border: 3px solid transparent;
+    border-radius: 3px;
+}
+
+h1 {
+  padding: 20px 10px;
+}
+
+
+
+footer {
+    background-color: $main-background;
+}
+   
+footer h3 { 
+    color: $text;
+    text-align: center;
+    margin-top: 0px;
+}
+  
+
+// ABOUT ME
+
+#about-me-content-container > h1 {
+    font-size: 100px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;  
+  }
+  
+  #about-me-content-container > h2 {
+    font-size: 50px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;  
+  }
+  
+  
+  #about-me-scroll-down > h3 {
+    font-size: 10px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;  
+    margin: 0px 0px 5px 0px;
+  }
+
+
+// SIDENAV
+
+#sidenav-options-contact {
+    border-top: solid 3px $accent;
+    border-bottom: solid 3px $accent;
+    padding: 10px;
+}
+
+
+// Portfolio 
+
+.portfolio-row-item > img {
+    width: 100%;
+    object-fit: cover;
+    height: 80%;
+    border-radius: 3px 3px 0px 0px;
+}
+  
+.portfolio-row-item > h4 {
+    margin: 5px 0px;
+    font-size: 20px;
+}
+
+#form-info > h1 {
+  font-size: 32px;
+  padding: 0px;
+}
+
+
+// CODING EXAMPLES
+
+#coding-examples > h1 {
+    text-align: center;
+    font-size: 50px
+}
+
+.scion-column > h1 {
+    font-size: 30px;
+    color: $text;
+}
+  
+.scion-column > p {
+    font-size: 20px;
+}
+
+
+

@@ -1,0 +1,31 @@
+// ARROW DOWN
+@use "../base/mixins" as mixin;
+
+
+.arrow-down {
+    @include mixin.arrow(45deg);
+}
+  
+#about-me-scroll-down {
+    position: absolute;
+    font-size: 15px;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+// ARROW UP
+
+.arrow-up {
+    @include mixin.arrow(225deg);
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+#scroll-up {
+    text-align: center;
+}
+  
