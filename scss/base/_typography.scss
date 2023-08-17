@@ -29,6 +29,12 @@ input {
     border-radius: 3px;
 }
 
+h1 {
+  padding: 20px 10px;
+}
+
+
+
 footer {
     background-color: $main-background;
 }
@@ -43,13 +49,13 @@ footer h3 {
 // ABOUT ME
 
 #about-me-content-container > h1 {
-    font-size: 25px;
+    font-size: 100px;
     background-color: rgba(0,0,0,0.5);
     border-radius: 5px;  
   }
   
   #about-me-content-container > h2 {
-    font-size: 15px;
+    font-size: 50px;
     background-color: rgba(0,0,0,0.5);
     border-radius: 5px;  
   }
@@ -84,6 +90,11 @@ footer h3 {
 .portfolio-row-item > h4 {
     margin: 5px 0px;
     font-size: 20px;
+}
+
+#form-info > h1 {
+  font-size: 32px;
+  padding: 0px;
 }
 
 
