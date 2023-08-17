@@ -573,16 +573,16 @@ footer a {
     width: 47.3%;
   }
   #about-me-content-container > h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
   #about-me-content-container > h2 {
-    font-size: 54px;
+    font-size: 50px;
   }
   #about-me-content-container > h3 {
     font-size: 50px;
   }
   #about-me-content-container {
-    width: 70%;
+    width: 75%;
   }
 }
 
