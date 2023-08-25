@@ -3,14 +3,17 @@
 // MEDIA QUERIES
 
 @media (min-width: 576px) {
-    .sidenav {
-      display: block;
+    #sidenav {
+      display: block !important;
+      margin-left: 0px !important;
     }
     main {
       margin-left: 130px;
+      filter: brightness(100%) !important;
     }
     footer {
       margin-left: 130px;
+      filter: brightness(100%) !important;
     }
     .container {
       padding: 40px 40px;
@@ -26,6 +29,9 @@
     }
     #about-me-content-container {
       width: 90%;
+    }
+    #about-me button {
+      display: none;
     }
 
   }
@@ -46,6 +52,7 @@
   h2 {
     margin-top: 0px;
   }
+  
 }
 
 @media (min-width: 768px) {

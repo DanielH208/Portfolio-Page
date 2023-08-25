@@ -11,56 +11,36 @@ $("#about-me-info").typewriter({
 
 });
 
-// $("#about-me button").on("click", () => {
-//     $(".sidenav").show();
-//     $("#about-me button").addClass("hamburger hamburger--slider is-active");
-//     $("#about-me button").css("margin-left", "130px");
-// })
-// $("#about-me button").off("click", () => {
-//     $(".sidenav").hide();
-//     $("#about-me button").removeClass("hamburger hamburger--slider is-active");
-//     $("#about-me button").css("margin-left", "0px")
-// })
-
 let switchStatus = false;  
 $("#about-me button").on('click', function() {  
     if (switchStatus == false) {
-        $(".sidenav").show();
+        $("main").css("filter", "brightness(50%)");
+        $("footer").css("filter", "brightness(50%)"); 
+        $("#sidenav").addClass(" animate__slideInLeft");
         $("#about-me button").addClass("hamburger hamburger--slider is-active");
-        $("#about-me button").css("margin-left", "130px");
-        $("main").css("filter", "brightness(50%)")
-        $("footer").css("filter", "brightness(50%)")
+        $("#about-me button").removeClass("animate__animated animate__slideOutLeft");
+        $("#about-me button").addClass("animate__animated animate__slideInLeft");
+        $("#about-me button").css("margin-left", "140px");
+        $("#sidenav").show();
         switchStatus = true;
-    }
+    } 
     else {
-        $(".sidenav").hide();
+        $("main").css("filter", "brightness(100%)");
+        $("footer").css("filter", "brightness(100%)");
+        $("#sidenav").removeClass(" animate__slideInLeft");
+        $("#sidenav").addClass(" animate__slideOutLeft");
         $("#about-me button").removeClass("hamburger hamburger--slider is-active");
         $("#about-me button").css("position", "absolute");
         $("#about-me button").css("padding", "15px");
-        $("#about-me button").css("margin-left", "0px");
-        $("main").css("filter", "brightness(100%)")
-        $("footer").css("filter", "brightness(100%)")
+        $("#about-me button").css("margin", "10px");
+        $("#about-me button").css("border-radius", "6px");
+        $("#sidenav").slideUp(1000);
         switchStatus = false;
+        
+        
     }
+    $("#sidenav").removeClass(" animate__slideOutLeft");
+    
 });
 
-
-// $("#about-me button").click(() => {
-    
-//     $(".sidenav").toggle();
-//     // $("#about-me button").slideToggle(() => {
-//     //     $("#about-me button").addClass("hamburger hamburger--slider is-active");
-//     // });
-
-    
-
-
-//     // $("#about-me button").css("margin-left", "130px");
-//     // $(".sidenav").toggle(() => {
-//     //     $("#about-me button").css("margin-left", "0px");
-        
-//     // });
-//     // $("#about-me button").css("margin-left", "0px");
-    
-// }).addClass("hamburger hamburger--slider is-active");
 
