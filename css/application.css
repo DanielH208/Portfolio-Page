@@ -189,7 +189,7 @@ footer h3 {
   font-size: 20px;
 }
 
-.sidenav {
+#sidenav {
   display: none;
   width: 130px;
   height: 100vh;
@@ -202,6 +202,10 @@ footer h3 {
   border-right: solid 3px #0b7029;
   overflow-x: hidden; /* Disable horizontal scroll */
   background-color: #1a1c26;
+}
+
+#sidenav-options-contact {
+  padding-top: 30px;
 }
 
 #sidenav-options {
@@ -385,12 +389,15 @@ footer h3 {
 #sidenav-header > a {
   padding-bottom: 20px;
   text-align: center;
-  font-size: 25px;
-  color: #0b7029;
   border-bottom: solid 3px #0b7029;
 }
 
-.sidenav a {
+#sidenav-header > a > h1 {
+  font-size: 40px;
+  color: #0b7029;
+}
+
+#sidenav a {
   display: block;
   font-size: 11px;
   text-align: center;
@@ -427,14 +434,17 @@ footer a {
 }
 
 @media (min-width: 576px) {
-  .sidenav {
-    display: block;
+  #sidenav {
+    display: block !important;
+    margin-left: 0px !important;
   }
   main {
     margin-left: 130px;
+    filter: brightness(100%) !important;
   }
   footer {
     margin-left: 130px;
+    filter: brightness(100%) !important;
   }
   .container {
     padding: 40px 40px;
@@ -450,6 +460,9 @@ footer a {
   }
   #about-me-content-container {
     width: 90%;
+  }
+  #about-me button {
+    display: none;
   }
 }
 @media (max-width: 575px) {
