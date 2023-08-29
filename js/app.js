@@ -53,9 +53,13 @@ function regexPassOrFail(regex, input, field) {
     }
 }
 
-
-
-
+function empty(input, field) {
+    if (input == "") {
+        field.css("border-color", "red");
+    } else {
+        field.css("border-color", "transparent");
+    }
+}
 
 $("#submit-button").click((event) => {
     event.preventDefault(); 
@@ -73,15 +77,12 @@ $("#submit-button").click((event) => {
     let lastNameInput= $("#form-lastname").val();
     let lastNameField = $("#form-lastname");
 
+    let textareaInput = $("#form-textarea").val();
+    let textareaField = $("#form-textarea");
 
-    
+    empty(firstNameInput, firstNameField);
+    empty(lastNameInput, lastNameField);
+    empty(textareaInput, textareaField);
     regexPassOrFail(nameRegex, firstNameInput, firstNameField);
     regexPassOrFail(nameRegex, lastNameInput, lastNameField);
-
-    
-
-
-
-
-
 })
