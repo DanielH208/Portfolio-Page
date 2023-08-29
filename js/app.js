@@ -43,4 +43,22 @@ $("#about-me button").on('click', function() {
     
 });
 
-
+$("#submit-button").click((event) => {
+    alert("click");
+    event.preventDefault(); 
+    let userInput = $("#form-email").val();
+    alert(userInput);
+    //let userInput = "john.smith@gmail.com";
+    let field = $("#form-email");
+    const regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    if (regex.test(userInput)) {
+        alert("done");
+        field.css("border-color", "transparent");
+        return true;
+    }
+    else {
+        field.css("border-color", "red");
+        alert("false");
+        return false;
+    }
+})
