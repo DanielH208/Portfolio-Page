@@ -44,3 +44,45 @@ $("#about-me button").on('click', function() {
 });
 
 
+
+function regexPassOrFail(regex, input, field) {
+    if (regex.test(input)) {
+        field.css("border-color", "transparent");
+    } else {
+        field.css("border-color", "red");
+    }
+}
+
+function empty(input, field) {
+    if (input == "") {
+        field.css("border-color", "red");
+    } else {
+        field.css("border-color", "transparent");
+    }
+}
+
+$("#submit-button").click((event) => {
+    event.preventDefault(); 
+
+    let userEmailInput = $("#form-email").val();
+    let emailField = $("#form-email");
+    const emailRegex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    regexPassOrFail(emailRegex, userEmailInput, emailField);
+
+
+    const nameRegex = new RegExp(/^[A-Za-z]+$/);
+    let firstNameInput= $("#form-firstname").val();
+    let firstNameField = $("#form-firstname");
+    
+    let lastNameInput= $("#form-lastname").val();
+    let lastNameField = $("#form-lastname");
+
+    let textareaInput = $("#form-textarea").val();
+    let textareaField = $("#form-textarea");
+
+    empty(firstNameInput, firstNameField);
+    empty(lastNameInput, lastNameField);
+    empty(textareaInput, textareaField);
+    regexPassOrFail(nameRegex, firstNameInput, firstNameField);
+    regexPassOrFail(nameRegex, lastNameInput, lastNameField);
+})

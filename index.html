@@ -169,11 +169,11 @@
                     </div>
                     <div id="form-container" class="form-section">
                         <form>
-                            <input id="form-firstname" class="form-elements" type="text" placeholder="First Name*">
-                            <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*">
-                            <input class="form-elements" type="text" placeholder="Email Address*">
+                            <input id="form-firstname" class="form-elements" type="text" placeholder="First Name*" maxlength="20" required>
+                            <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*" maxlength="30" required>
+                            <input class="form-elements" id="form-email" type="text" placeholder="Email Address*" required>
                             <input class="form-elements" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" class="form-elements" type="text" placeholder="Message" rows="4" ></textarea>
+                            <textarea id="form-textarea" class="form-elements" type="text" placeholder="Message*" rows="4" required></textarea>
                             <br>
                             <input id="submit-button" type="submit" value="Submit">
                         </form>
