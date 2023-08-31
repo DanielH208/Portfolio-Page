@@ -76,11 +76,6 @@ footer h3 {
   padding: 0px;
 }
 
-#coding-examples > h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
 .scion-column > h1 {
   font-size: 30px;
   color: #e8e6e3;
@@ -173,11 +168,6 @@ footer h3 {
 #form-info > h1 {
   font-size: 32px;
   padding: 0px;
-}
-
-#coding-examples > h1 {
-  text-align: center;
-  font-size: 50px;
 }
 
 .scion-column > h1 {
@@ -331,6 +321,25 @@ footer h3 {
 #scion-container {
   padding: 40px;
   background-color: #292b37;
+}
+
+.slide-content {
+  width: 90%;
+  background-color: #1a1c26;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.slide-content > img {
+  width: 90%;
+}
+
+.slide-content > h1 {
+  padding: 0px 10px 10px 10px;
+}
+
+.slick-dots {
+  color: white;
 }
 
 .arrow-down {
