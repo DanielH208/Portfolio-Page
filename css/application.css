@@ -323,19 +323,36 @@ footer h3 {
   background-color: #292b37;
 }
 
+#coding-examples {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#slides {
+  width: 100%;
+}
+
 .slide-content {
-  width: 90%;
+  width: 100%;
   background-color: #1a1c26;
-  padding: 20px;
   border-radius: 6px;
 }
 
-.slide-content > img {
+.slide-content > img, .slide-content > h1, .slide-content > p {
+  padding: 0px;
+  margin: 10px;
   width: 90%;
 }
 
-.slide-content > h1 {
-  padding: 0px 10px 10px 10px;
+.slide-content > img {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide-content > p {
+  width: 90%;
 }
 
 .slick-dots {
@@ -546,6 +563,11 @@ footer a {
   h1 {
     font-size: 42px;
   }
+  #slides {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media (min-width: 1200px) {
   .scion-column {
@@ -586,6 +608,13 @@ footer a {
   h1 {
     font-size: 50px;
   }
+  #slides {
+    width: 1000px;
+  }
+  .slide-content {
+    width: 490px !important;
+    margin-left: 10px;
+  }
 }
 @media (min-width: 1600px) {
   #form-section-container {
@@ -605,6 +634,13 @@ footer a {
   }
   #about-me-content-container {
     width: 75%;
+  }
+  #slides {
+    width: 1300px;
+  }
+  .slide-content {
+    width: 630px !important;
+    margin-left: 20px;
   }
 }
 

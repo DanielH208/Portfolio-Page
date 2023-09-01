@@ -91,10 +91,11 @@ $("#slides").slick({
     slidesToShow: 2,
     slidesToScroll: 2,
     arrows: false,
+    draggable: false,
     dots: true,
     responsive: [
         {
-          breakpoint: 992,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

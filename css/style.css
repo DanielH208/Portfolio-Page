@@ -323,19 +323,36 @@ footer h3 {
   background-color: #292b37;
 }
 
+#coding-examples {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#slides {
+  width: 100%;
+}
+
 .slide-content {
-  width: 90%;
+  width: 100%;
   background-color: #1a1c26;
-  padding: 20px;
   border-radius: 6px;
 }
 
-.slide-content > img {
+.slide-content > img, .slide-content > h1, .slide-content > p {
+  padding: 0px;
+  margin: 10px;
   width: 90%;
 }
 
-.slide-content > h1 {
-  padding: 0px 10px 10px 10px;
+.slide-content > img {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide-content > p {
+  width: 90%;
 }
 
 .slick-dots {
