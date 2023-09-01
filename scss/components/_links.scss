@@ -3,12 +3,15 @@
 #sidenav-header > a {
     padding-bottom: 20px;
     text-align: center;
-    font-size: 25px;
-    color: $accent;
     border-bottom: solid 3px $accent;
 }
+#sidenav-header > a > h1 {
+    font-size: 40px;
+    color: $accent;
+}
 
-.sidenav a {
+
+#sidenav a {
     display: block;
     font-size: 11px;
     text-align: center;

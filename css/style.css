@@ -76,11 +76,6 @@ footer h3 {
   padding: 0px;
 }
 
-#coding-examples > h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
 .scion-column > h1 {
   font-size: 30px;
   color: #e8e6e3;
@@ -175,11 +170,6 @@ footer h3 {
   padding: 0px;
 }
 
-#coding-examples > h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
 .scion-column > h1 {
   font-size: 30px;
   color: #e8e6e3;
@@ -189,7 +179,7 @@ footer h3 {
   font-size: 20px;
 }
 
-.sidenav {
+#sidenav {
   display: none;
   width: 130px;
   height: 100vh;
@@ -202,6 +192,10 @@ footer h3 {
   border-right: solid 3px #0b7029;
   overflow-x: hidden; /* Disable horizontal scroll */
   background-color: #1a1c26;
+}
+
+#sidenav-options-contact {
+  padding-top: 30px;
 }
 
 #sidenav-options {
@@ -329,6 +323,42 @@ footer h3 {
   background-color: #292b37;
 }
 
+#coding-examples {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#slides {
+  width: 100%;
+}
+
+.slide-content {
+  width: 100%;
+  background-color: #1a1c26;
+  border-radius: 6px;
+}
+
+.slide-content > img, .slide-content > h1, .slide-content > p {
+  padding: 0px;
+  margin: 10px;
+  width: 90%;
+}
+
+.slide-content > img {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide-content > p {
+  width: 90%;
+}
+
+.slick-dots {
+  color: white;
+}
+
 .arrow-down {
   border: solid white;
   border-width: 0 6px 6px 0;
@@ -385,12 +415,15 @@ footer h3 {
 #sidenav-header > a {
   padding-bottom: 20px;
   text-align: center;
-  font-size: 25px;
-  color: #0b7029;
   border-bottom: solid 3px #0b7029;
 }
 
-.sidenav a {
+#sidenav-header > a > h1 {
+  font-size: 40px;
+  color: #0b7029;
+}
+
+#sidenav a {
   display: block;
   font-size: 11px;
   text-align: center;

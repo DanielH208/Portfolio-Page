@@ -5,14 +5,18 @@
         <title>Daniel Higgins Portfolio</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/application.css">
+        <link rel="stylesheet" href="css/hamburgers.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
     </head>
     <body>
-        <div class="sidenav">
+        <div id="sidenav" class="animate__animated">
             <div id="sidenav-header">
                 <a href="#"><h1>DH</h1></a>
             </div>
             <div id="sidenav-options">
-                <a href="#about-me"">About Me</a>
+                <a href="#about-me">About Me</a>
                 <a href="#portfolio">My Portfolio</a>
                 <a href="#coding-examples">Coding Examples</a>
                 <a href="#scion">SCS Scheme</a>
@@ -25,20 +29,34 @@
         </div>
         <main>
             <div id="about-me">
+                <button class="hamburger hamburger--slider" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
                 <img id="about-me-image-container" src="assets/codebackground.jpg">
                 <div id="about-me-content-container">
-                    <h1>My Name Is Daniel Higgins</h1>
+                    <h1>My Name Is Daniel Higgins</h1>          
                     <h2>
-                        I am a enthusiastic hard working software developer. I enjoy working 
-                        across the whole development stack and learning 
-                        new coding languages and techniques. I have a few months
-                        work experience as a professional junior software developer as well as lots of
-                        courses and certifications. Ive been coding 
-                        in my spare time and at school for years. I have a large
-                        side project called GasGuru a crypto currency transaction 
-                        price predictor ive been working on for close to two years 
-                        its close to being up and running. You can see it below in 
-                        my portfolio.
+                        <div  id="about-me-info" 
+                            tw-text="
+                            I am a enthusiastic hard working software developer.
+                            I enjoy working across the whole development stack and learning new coding languages and techniques.
+                            I have a few months work experience as a professional junior software developer as well as lots of courses and certifications.
+                            Ive been coding in my spare time and at school for years. 
+                            I have a large project called GasGuru its a crypto currency transaction price predictor.
+                            Ive been working on it for close to two years its close to being up and running.
+                            You can see it below in my portfolio.">
+                        </div> 
+                        <noscript>
+                            I am a enthusiastic hard working software developer.
+                            I enjoy working across the whole development stack and learning new coding languages and techniques.
+                            I have a few months work experience as a professional junior software developer as well as lots of courses and certifications.
+                            Ive been coding in my spare time and at school for years. 
+                            I have a large project called GasGuru its a crypto currency transaction price predictor.
+                            Ive been working on it for close to two years its close to being up and running.
+                            You can see it below in my portfolio.
+                        </noscript>    
                     </h2>
                 </div>
                 <div id="about-me-scroll-down">
@@ -86,7 +104,26 @@
             <div class="container">
                 <h1>Coding Examples</h1>
                 <div id="coding-examples">
-                    <h1>Coming Soon</h1>
+                    <div id="slides">
+                        <div class="slide-content">
+                            <img src="assets/coding-examples/form-validation.JPG">
+                            <h1>Form Validation</h1>
+                            <p>Custom JavaScript form validation for a contact me form from portfolio</p>
+                             <p>Skills: JavaScript . Jquery</p>
+                        </div>
+                        <div class="slide-content">
+                            <img src="assets/coding-examples/form-validation.JPG">
+                            <h1>Form Validation</h1>
+                            <p>Custom JavaScript form validation for a contact me form from portfolio</p>
+                             <p>Skills: JavaScript . Jquery</p>
+                        </div>
+                        <div class="slide-content">
+                            <img src="assets/coding-examples/form-validation.JPG">
+                            <h1>Form Validation</h1>
+                            <p>Custom JavaScript form validation for a contact me form from portfolio</p>
+                             <p>Skills: JavaScript . Jquery</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="scion-container" class="container">
@@ -153,11 +190,11 @@
                     </div>
                     <div id="form-container" class="form-section">
                         <form>
-                            <input id="form-firstname" class="form-elements" type="text" placeholder="First Name*">
-                            <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*">
-                            <input class="form-elements" type="text" placeholder="Email Address*">
+                            <input id="form-firstname" class="form-elements" type="text" placeholder="First Name*" maxlength="20" required>
+                            <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*" maxlength="30" required>
+                            <input class="form-elements" id="form-email" type="text" placeholder="Email Address*" required>
                             <input class="form-elements" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" class="form-elements" type="text" placeholder="Message" rows="4" ></textarea>
+                            <textarea id="form-textarea" class="form-elements" type="text" placeholder="Message*" rows="4" required></textarea>
                             <br>
                             <input id="submit-button" type="submit" value="Submit">
                         </form>
@@ -173,5 +210,10 @@
                 </div>
             </a>
         </footer>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/aeo-typewriter.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/app.js"></script>
+    
     </body>
 </html>
