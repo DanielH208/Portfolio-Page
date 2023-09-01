@@ -86,3 +86,20 @@ $("#submit-button").click((event) => {
     regexPassOrFail(nameRegex, firstNameInput, firstNameField);
     regexPassOrFail(nameRegex, lastNameInput, lastNameField);
 })
+
+$("#slides").slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: false,
+    draggable: false,
+    dots: true,
+    responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+    ]
+})
