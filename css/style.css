@@ -24,6 +24,13 @@ h1 {
   padding: 20px 10px;
 }
 
+input, textarea {
+  padding-inline-start: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
 footer {
   background-color: black;
 }
@@ -41,6 +48,12 @@ footer h3 {
 }
 
 #about-me-content-container > h2 {
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+#about-me-info {
   font-size: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -71,9 +84,21 @@ footer h3 {
   font-size: 20px;
 }
 
+.portfolio-row-item > p {
+  padding-left: 10px;
+}
+
 #form-info > h1 {
   font-size: 32px;
   padding: 0px;
+}
+
+#form-info > a {
+  color: white;
+}
+
+#form-info > p {
+  word-break: normal;
 }
 
 .scion-column > h1 {
@@ -118,6 +143,13 @@ h1 {
   padding: 20px 10px;
 }
 
+input, textarea {
+  padding-inline-start: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
 footer {
   background-color: black;
 }
@@ -135,6 +167,12 @@ footer h3 {
 }
 
 #about-me-content-container > h2 {
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+#about-me-info {
   font-size: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -165,9 +203,21 @@ footer h3 {
   font-size: 20px;
 }
 
+.portfolio-row-item > p {
+  padding-left: 10px;
+}
+
 #form-info > h1 {
   font-size: 32px;
   padding: 0px;
+}
+
+#form-info > a {
+  color: white;
+}
+
+#form-info > p {
+  word-break: normal;
 }
 
 .scion-column > h1 {

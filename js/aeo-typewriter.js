@@ -4,7 +4,7 @@
     $.fn.typewriter = function( options ) {
 
         var settings = $.extend({
-            text: $(this).attr("tw-text"),
+            text: $(this).attr("data-info"),
             delay: 150,
             waitingTime: 1000,
             cursor: false,
