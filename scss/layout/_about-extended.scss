@@ -1,0 +1,16 @@
+#about-me-extended {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.about-me-columns{
+    width: 100%;
+    flex-grow: 1;
+}
+
+#about-me-extended-container {
+    background-color: #292b37;
+    //margin-top: 20px;
+    padding: 20px;
+}

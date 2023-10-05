@@ -1,6 +1,3 @@
-$( "#about-me-content-container" ).click(function() {
-    alert( "aaaaaaaaaaaaaaaaaa" );
-  });
 
 
 $("#about-me-info").typewriter({

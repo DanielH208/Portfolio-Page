@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/hamburgers.css">
         <link rel="stylesheet" href="css/animate.css">
+        <script src="https://kit.fontawesome.com/7cba581338.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/application.css">
     </head>
     <body>
@@ -21,7 +22,7 @@
                 <a href="#"><h1>DH</h1></a>
             </div>
             <div id="sidenav-options">
-                <a href="#about-me">About Me</a>
+                <a href="#about-me-extended-container">About Me</a>
                 <a href="#portfolio">My Portfolio</a>
                 <a href="#coding-examples">Coding Examples</a>
                 <a href="#scion">SCS Scheme</a>
@@ -44,23 +45,16 @@
                     <h1>My Name Is Daniel Higgins</h1>                       
                     <div id="about-me-info" 
                         data-info="
-                        I am a enthusiastic hard working software developer.
-                        I enjoy working across the whole development stack and learning new coding languages and techniques.
-                        I have a few months work experience as a professional junior software developer as well as lots of courses and certifications.
-                        Ive been coding in my spare time and at school for years. 
-                        I have a large project called GasGuru its a crypto currency transaction price predictor.
-                        Ive been working on it for close to two years its close to being up and running.
-                        You can see it below in my portfolio.">
+                            I am a enthusiastic hard working software developer.
+                            I enjoy working across the whole development stack and learning new coding languages and techniques.
+                            I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
+                        ">
                     </div> 
                     <noscript>
                         <h2>
                         I am a enthusiastic hard working software developer.
                         I enjoy working across the whole development stack and learning new coding languages and techniques.
-                        I have a few months work experience as a professional junior software developer as well as lots of courses and certifications.
-                        Ive been coding in my spare time and at school for years. 
-                        I have a large project called GasGuru its a crypto currency transaction price predictor.
-                        Ive been working on it for close to two years its close to being up and running.
-                        You can see it below in my portfolio.
+                        I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
                         </h2>
                     </noscript>    
                         
@@ -71,20 +65,77 @@
                     <i class="arrow-down"></i>
                 </div>
             </div>
+            <div id="about-me-extended-container">
+                <h1>About Me</h1>
+                <div id="about-me-extended"> 
+                    <div id="about-me-overview" class="about-me-columns">
+                        <h1>Overview</h1>
+                        <p>
+                            I am keen to further my career in professional software development.I am an enthusiastic young developer with the ambition to keep continuously learning and 
+                            honing my skills whilst working hard as part of a development team.
+                            <br>
+                            <br>
+                            I have completed a level 4 software developer standard qualification through a QA bootcamp and acquired a 
+                            <a href="https://www.credly.com/badges/7c293974-6cd4-42dd-8c60-3d9c73a31826" target="_blank">Microsoft Azure AZ-900</a> certification, which has given me 
+                            knowledge of the Microsoft Azure cloud ecosystem and services. This bootcamp added some more specific software development skills and experience to my existing 
+                            <a href="https://www.linkedin.com/in/danielhiggins20/overlay/1583766359559/single-media-viewer?type=DOCUMENT&profileId=ACoAAC-fj6kBLRMLDcfDMaxTP5SrZWY0CfXyqWg&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4T5uxyiGSZC6HpBm5RKuZA%3D%3D" target="_blank">
+                            level 3 BTEC extended IT diploma</a>. As well as formal qualifications, I have also completed a number of online training courses in front-end development using JavaScript, HTML5, 
+                            CSS and React from <a href="https://www.coursera.org/account/accomplishments/certificate/4YCAH6339PZR" target="_blank">Meta</a>, Codecademy and 
+                            <a href="https://coursera.org/share/a22b4ee466d27c85aeabb68792f23b83" target="_blank">Duke University</a>.
+                        </p>
+                        <div id="coding-icons">
+                            <h2>
+                                Im interested in learning any coding languages and techniques. These are my main core coding languages and technologies I have the most experience with:
+                            </h2>
+                            <ul id="coding-icons-container">
+                                <li><i class="fa-brands fa-python fa-4x"></i></li>
+                                <li><i class="fa-brands fa-square-js fa-4x"></i></li>
+                                <li><img src="assets/jquery.svg"></li>
+                                <li><i class="fa-brands fa-css3 fa-4x"></i></li>
+                                <li><i class="fa-brands fa-html5 fa-4x"></i></li>
+                                <li><i class="fa-solid fa-cloud-arrow-up fa-3x"></i></li>
+                                <li><img src="assets/mysql.svg"></li>
+                                <li><i class="fa-brands fa-react fa-4x"></i></li>
+                                <li><i class="fa-brands fa-jira fa-4x"></i></li>
+                                <li><i class="fa-brands fa-github fa-4x"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="about-me-experience" class="about-me-columns">
+                        <h1>Experience</h1>
+                        <p>
+                            In my previous job as junior software developer I was trained and gained some hands-on experience working with modern Front ends frameworks such as React, 
+                            Angular 12 and Redux, REST APIs and  some object orientated programming using Java SE 11 and Java EE 6. Also debugging in IntelliJ and using Junit to automate testing.
+                            Whilst working there I also gained experience with modern development practices such as an Agile working with Jira, continuous integration (CI) using Bamboo, Maven for 
+                            build automation and version control using Git and Subversion
+                            <br>
+                            <br>
+                            For the past few years I have been working on a project to build a data processing and prediction web app for Cryptocurrency transaction fee / gas prediction (<a>GasGuru</a>).
+                            The back end is written in Python using the Pandas library to manipulate and analyse JSON data from an external REST API. I then use a custom Flask REST API to feed the 
+                            prediction and real time data to the front-end app. Front end is a React web app which allows clean representation of the data as well as a interactive slider for smoothly inputting
+                            desired preference of trascation time vs cost to be sent as a GET request to the flask API to retrieve the predicted best hour to send crypto in.
+                            <br>
+                            <br>
+                            I have some experience and qualifications in cloud services specifically I acquired a <a href="https://www.credly.com/badges/7c293974-6cd4-42dd-8c60-3d9c73a31826" target="_blank">Microsoft Azure AZ-900</a>
+                            certification by passing the Microsoft AZ-900 (Azure) exam. Also my GasGuru project has given me hands-on experience with AWS Cloud technologies, as some of the python files 
+                            are hosted on an ec2 instance which pulls data from the external API every minute.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div id="portfolio">
                     <h1>Portfolio</h1>
                     <ul id="portfolio-row">
                         <li id="portfolio-row-item-one" class="portfolio-row-item">
-                            <img src="assets/projectplaceholder.JPG" alt="Placeholder image for upcoming portfolio project image">
-                            <h4>Project One</h4>
+                            <img src="assets/JavaScriptArrays.JPG" alt="Image of JavaScript Arrays webpage">
+                            <h4>JavaScript Arrays</h4>
                             <p>
-                                smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
-                                smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
-                                smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
-                                smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
+                                Webpage that pulls down a random image using fetch from a external API. User can then enter an email address which if it passes validation the 
+                                image is assigned to a UL for the corresponding email address. If validation fails a custom error message pops up explaining why the email
+                                failed validation.
                             </p>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="view-project-link" href="https://js-array.daniel-higgins.netmatters-scs.co.uk/" target="_blank">View Project &rarr;</a>
                         </li>
                         <li id="portfolio-row-item-two" class="portfolio-row-item">
                             <img src="assets/projectplaceholder.JPG" alt="Placeholder image for upcoming portfolio project image">
@@ -95,7 +146,7 @@
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                             </p>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="view-project-link" href="#">View Project &rarr;</a>
                         </li>
                         <li id="portfolio-row-item-three" class="portfolio-row-item">
                             <img src="assets/projectplaceholder.JPG" alt="Placeholder image for upcoming portfolio project image">
@@ -106,7 +157,7 @@
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                             </p>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="view-project-link" href="#">View Project &rarr;</a>
                         </li>
                         <li id="portfolio-row-item-four" class="portfolio-row-item">
                             <img src="assets/projectplaceholder.JPG" alt="Placeholder image for upcoming portfolio project image">
@@ -117,7 +168,7 @@
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                             </p>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="view-project-link" href="#">View Project &rarr;</a>
                         </li>
                         <li id="portfolio-row-item-five" class="portfolio-row-item">
                             <img src="assets/projectplaceholder.JPG" alt="Placeholder image for upcoming portfolio project image">
@@ -128,7 +179,7 @@
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                             </p>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="view-project-link" href="#">View Project &rarr;</a>
                         </li>
                         <li id="portfolio-row-item-six" class="portfolio-row-item">
                             <img src="assets/projectplaceholder.JPG" alt="Placeholder image for upcoming portfolio project image">
@@ -139,7 +190,7 @@
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                                 smckp cdocdc sc scsc  cscscn  cscsnics  cscsc
                             </p>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="view-project-link" href="#">View Project &rarr;</a>
                         </li>
                     </ul>
                 </div>
@@ -149,28 +200,40 @@
                 <div id="coding-examples">
                     <div id="slides">
                         <div class="slide-content">
-                            <img src="assets/coding-examples/form-validation.JPG" alt="Placeholder image for upcoming coding examples">
+                            <img id="javascript-val-image" src="assets/coding-examples/form-validation.JPG" alt="Image of custom JavaScript validation">
                             <h1>Form Validation</h1>
                             <p>
                                 Custom JavaScript / JQeuery form validation for a contact me form 
                                 from my portfolio website. This validation checks for wrong input 
-                                types as well as fields being left empty by the user.This validation 
-                                is stored in two functions so it can be easily called on different 
-                                input fields if needed in the future.
+                                types as well as fields being left empty by the user. If validation fails
+                                the input box is highlighted red giving the user a visual cue that they entered
+                                an invalid input. The validation is stored in two functions so it can be easily called on different 
+                                input fields if needed in the future. Regex validation function can be used with any 
+                                different regex expression in the future easily by just setting and testing a new expression. 
+                                The empty function can easily be applied to any input boxs in the future giving the webpage
+                                a consistent default error checking.
                             </p>
                              <p>Skills: JavaScript . Jquery</p>
                         </div>
                         <div class="slide-content">
-                            <img src="assets/coding-examples/form-validation.JPG" alt="Placeholder image for upcoming coding examples">
-                            <h1>Form Validation</h1>
+                            <img src="assets/coding-examples/button-mixin.JPG" alt="Image of custom Mixin Button">
+                            <img src="assets/coding-examples/button-mixin-call.JPG" alt="Image of custom Mixin Button call">
+                            <h1>Button Mixin</h1>
                             <p>
-                                Custom JavaScript / JQeuery form validation for a contact me form 
-                                from my portfolio website. This validation checks for wrong input 
-                                types as well as fields being left empty by the user.This validation 
-                                is stored in two functions so it can be easily called on different 
-                                input fields if needed in the future.
+                                Custom button mixin for applying easy default styling to buttons. I decided to use
+                                a mixin for the buttons as it makes creating buttons with matching styling much easier
+                                which gives the  webpage a more uniformed look. 
+                                <br>
+                                <br>
+                                The mixin works like a function call
+                                where you call the mixin within the css selector you want and pass in the parameters values
+                                in the order they are set within the mixin. A mixin offers flexability as you can overide 
+                                any of the default set value with your own custom values. Such as changing the colour to make
+                                certain buttons more distinct. If the user doesnt pass in all the parameters then the values
+                                are simply just not set say you dont want to declare a width for the button leaving it on default.
+
                             </p>
-                            <p>Skills: JavaScript . Jquery</p>
+                            <p>Skills: SCSS . CSS</p>
                         </div>
                         <div class="slide-content">
                             <img src="assets/coding-examples/form-validation.JPG" alt="Placeholder image for upcoming coding examples">
@@ -254,7 +317,7 @@
                             work related below is my mobile phone number
                             and email address
                         </p>
-                        <a href="tel:+9059549545490"><h2>549059549545490</h2></a>
+                        <a href="tel:+44 7729356209"><h2>07729 356209</h2></a>
                         <a href="mailto:daniel.higgins7@btinternet.com"><h2>daniel.higgins7@btinternet.com</h2></a>
                     </div>
                     <div id="form-container" class="form-section">
@@ -281,7 +344,7 @@
         </footer>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/aeo-typewriter.js"></script>
-    <script src="js/slick.js"></script>
+    <script src="js/slick/slick.js"></script>
     <script src="js/app.js"></script>
     
     </body>
