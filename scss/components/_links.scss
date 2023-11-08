@@ -28,13 +28,35 @@
 // PORTFOLIO 
 
 .portfolio-row-item > a {
-    font-size: 10px;
+    font-size: 16px;
     color: $text
 }
   
 .portfolio-row-item > h4 , .portfolio-row-item > a {
     padding-left: 10px;
 }
+
+.portfolio-project-link {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.view-project-link {
+    position: absolute;
+    text-decoration: underline 2px;
+    text-underline-offset: 4px;
+    :first-child {
+        text-decoration: underline 2px;
+        text-underline-offset: 4px;
+    }
+    z-index: 1000;
+    bottom: 10px;
+}
+
 
 // ABOUT
 

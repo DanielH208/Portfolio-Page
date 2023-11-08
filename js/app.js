@@ -85,18 +85,25 @@ $("#submit-button").click((event) => {
 })
 
 $("#slides").slick({
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     arrows: false,
-    draggable: false,
+    draggable: true,
     dots: true,
     responsive: [
         {
-          breakpoint: 1200,
+          breakpoint: 1800,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 2,
+            slidesToScroll: 2,
           }
-        }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          }
     ]
 })

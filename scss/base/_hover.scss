@@ -8,6 +8,17 @@
     text-decoration-thickness: 2px;
 }
 
+
 #portfolio-row li:hover {
-    filter:brightness(50%)
-} 
+    margin-top: 0px;
+    margin-bottom: 40px;
+    background-color: #242735;
+}
+
+.view-project-link:hover {
+    filter: brightness(75%);
+}
+
+#submit-button:hover {
+    background-color: #b2b2b2;
+}
