@@ -13,10 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/hamburgers.css">
         <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="js/highlight/styles/default.min.css">
-        <link href="css/prism.css" rel="stylesheet" />
-        <!--<script src="js/highlight/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> -->
+        <link href="css/prism.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7cba581338.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/application.css">
     </head>
@@ -84,7 +81,7 @@
                             <a class="view-project-link" href="https://github.com/DanielH208/GasGuruExample" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-two" class="portfolio-row-item">
-                            <a class="portfolio-project-link" href="https://js-array.daniel-higgins.netmatters-scs.co.uk/" target="_blanck"></a>
+                            <a class="portfolio-project-link" href="https://js-array.daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
                             <img src="assets/JavaScriptArrays.JPG" alt="Image of JavaScript Arrays webpage">
                             <h4>JavaScript Arrays</h4>
                             <p>
@@ -95,14 +92,14 @@
                             <a class="view-project-link" href="https://github.com/DanielH208/JavaScript-Arrays" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-three" class="portfolio-row-item">
-                            <a class="portfolio-project-link"  href="https://netmatters.daniel-higgins.netmatters-scs.co.uk/" target="_blanck"></a>
+                            <a class="portfolio-project-link"  href="https://netmatters.daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
                             <img src="assets/Netmatters.JPG" alt="Image of webpage designed for Netmatters homepage">
                             <h4>Netmatters homepage</h4>
                             <p>
                                 Hand written homepage for Netmatters homepage. Covers all sections essential for a effective homepage with various user interactive elements and responsive styling.
                                 Site is optimised for all device sizes with dynamic styling providing a clean and visually appealing website.
                             </p>
-                            <a class="view-project-link" href="https://github.com/DanielH208/example_homepage" target="_blanck">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
+                            <a class="view-project-link" href="https://github.com/DanielH208/example_homepage" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-four" class="portfolio-row-item">
                             <a class="portfolio-project-link" href="#"></a>
@@ -112,16 +109,16 @@
                                 Cloud based database using a REST API to manage stock/inventory of a CD store. This makes CRUD commands easier then managing
                                 the inventory using physical files. Unit and intergration tested to a high coverage level. Developed with detailed Jira storyboard using storypoints.
                             </p>
-                            <a class="view-project-link" href="https://github.com/DanielH208/CD-Store-API" target="_blanck">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
+                            <a class="view-project-link" href="https://github.com/DanielH208/CD-Store-API" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-five" class="portfolio-row-item">
-                            <a class="portfolio-project-link" href="https://daniel-higgins.netmatters-scs.co.uk/" target="_blanck"></a>
+                            <a class="portfolio-project-link" href="https://daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
                             <img src="assets/portfolio.JPG" alt="Placeholder image for upcoming portfolio project image">
                             <h4>Portfolio(currently on)</h4>
                             <p>
                                 Portfolio website built using JavaScript, Jquery, HTML, SCSS.
                             </p>
-                            <a class="view-project-link" href="https://github.com/DanielH208/Portfolio-Page" target="_blanck">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
+                            <a class="view-project-link" href="https://github.com/DanielH208/Portfolio-Page" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -146,7 +143,7 @@ def welcome():
     return hello
 
 @app.route("/getBestHours/", defaults={ "price_weight": 0.8, "time_weight": 0.2})
-@app.route('/getBestHours/&ltfloat:price_weight>/&ltfloat:time_weight>', methods=['GET', 'POST'], )
+@app.route('/getBestHours/&lt;float:price_weight>/&lt;float:time_weight>', methods=['GET', 'POST'], )
 def returnBestHours(price_weight: float, time_weight: float):
     return getBestHours(price_weight, time_weight)
 
@@ -323,7 +320,7 @@ $("#submit-button").click((event) => {
                             work related below is my mobile phone number
                             and email address
                         </p>
-                        <a href="tel:+44 7729356209"><h2>07729 356209</h2></a>
+                        <a href="tel:+447729356209"><h2>07729 356209</h2></a>
                         <a href="mailto:daniel.higgins7@btinternet.com"><h2>daniel.higgins7@btinternet.com</h2></a>
                     </div>
                     <div id="form-container" class="form-section">
