@@ -18,54 +18,9 @@
         <link rel="stylesheet" href="css/application.css">
     </head>
     <body class="line-numbers"  data-prismjs-copy-timeout="500">
-        <div id="sidenav" class="animate__animated">
-            <div id="sidenav-header">
-                <a href="#"><h1>DH</h1></a>
-            </div>
-            <div id="sidenav-options">
-                <a href="about.html#about-me-extended-container">About Me</a>
-                <a href="#portfolio">My Portfolio</a>
-                <a href="#coding-examples">Coding Examples</a>
-                <a href="#scion">SCS Scheme</a>
-            </div>
-            <a href="#form-section-container" id="sidenav-options-contact"><strong>Contact Me</strong></a>
-            <div id="sidenav-social">
-                <a href="https://www.linkedin.com/in/danielhiggins20/" target="_blank"><img src="assets/linkedin.svg" alt="Linkedin logo"></a>
-                <a href="https://github.com/DanielH208" target="_blank"><img src="assets/github.svg" alt="Github logo"></a>
-            </div>
-        </div>
+        <?php include("php/sidenav.php"); ?>
         <main>
-            <div id="about-me">
-                <button class="hamburger hamburger--slider" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>    
-                </button>
-                <img id="about-me-image-container" src="assets/codebackground.jpg" alt="Image of rows of binary code">
-                <div id="about-me-content-container">
-                    <h1>My Name Is Daniel Higgins</h1>                       
-                    <div id="about-me-info" 
-                        data-info="
-                            I am a enthusiastic hard working software developer.
-                            I enjoy working across the whole development stack and learning new coding languages and techniques.
-                            I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
-                        ">
-                    </div> 
-                    <noscript>
-                        <h2>
-                        I am a enthusiastic hard working software developer.
-                        I enjoy working across the whole development stack and learning new coding languages and techniques.
-                        I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
-                        </h2>
-                    </noscript>    
-                        
-          
-                </div>
-                <div id="about-me-scroll-down">
-                    <h3>Scroll Down</h3>
-                    <i class="arrow-down"></i>
-                </div>
-            </div>
+            <?php include("php/aboutSummary.php"); ?>
             <div class="container">
                 <div id="portfolio">
                     <h1>Portfolio</h1>
