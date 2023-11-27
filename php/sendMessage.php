@@ -18,7 +18,9 @@
             $pdoStatement->execute();
             return true;
         } catch (Exception $e) {
-            echo "Database query failed no data sent: " . $e->getMessage();
+            //echo "Database query failed no data sent: " . $e->getMessage();
+            $_SESSION['errMsg'] = "Database query failed no data sent try again";
+            header('Location: index.php#submit-button');
             exit;
         }
       }

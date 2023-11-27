@@ -13,11 +13,15 @@
             //echo "Connected to $dbname at $host successfully.";
             }
         catch (PDOException $pe) {
-            die ("Could not connect to the database $dbname :" . $pe->getMessage());
+            //die ("Could not connect to the database $dbname :" . $pe->getMessage());
+            $_SESSION['errMsg'] = "Database failed to connect";
+            header('Location: index.php#submit-button');
         }
 
     }
     catch (PDOException $pe) {
-        die ("Error retrieving details from .env file:" . $pe->getMessage());
+        //die ("Error retrieving details from .env file:" . $pe->getMessage());
+        $_SESSION['errMsg'] = "Database details not correct";
+        header('Location: index.php#submit-button');
     }
 ?>

@@ -80,15 +80,11 @@
             unset($_SESSION['email']);
             unset($_SESSION['subject']);
             unset($_SESSION['message']);
-            echo ("success");
-            debug_to_console("success");
             $_SESSION['success'] = true;
             $_SESSION['errMsg'] = '';
         } 
         header('Location: index.php#submit-button');
         exit();
-        debug_to_console("fail");
-        echo ("fail");
     }
 ?>
 
@@ -374,11 +370,24 @@ $("#submit-button").click((event) => {
                     </div>
                     <div id="form-container" class="form-section">
                         <form action="index.php" method="post" onsubmit="return validateInputs()">
-                            <input id="form-firstname" name="first-name" class="form-elements" type="text" placeholder="First Name*" maxlength="20">
-                            <input id="form-lastname" name="last-name" class="form-elements" type="text" placeholder="Last Name*" maxlength="30">
-                            <input class="form-elements" name="email" id="form-email" type="text" placeholder="Email Address*">
+                            <input id="form-firstname" name="first-name" class="form-elements" type="text" placeholder="First Name *" maxlength="30">
+                            <input id="form-lastname" name="last-name" class="form-elements" type="text" placeholder="Last Name *" maxlength="30">
+                            <input class="form-elements" name="email" id="form-email" type="text" placeholder="Email Address *">
                             <input class="form-elements" name="subject" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" name ="message" class="form-elements" placeholder="Message*" rows="4"></textarea>
+                            <textarea id="form-textarea" name ="message" class="form-elements" placeholder="Message *" rows="4"></textarea>
+                            <br>
+                            <span class="enquiry-error<?php if ($_SESSION['errMsg']) echo '-active' ?>">
+                                    <?php
+                                        echo $_SESSION['errMsg'];
+                                        unset($_SESSION['errMsg']);
+                                        ?>
+                                    </span>
+                            <?php
+                                    if ($_SESSION['success']) {
+                                        echo "<span class='enquiry-success-message'>Thank you for your message</span>";
+                                        unset($_SESSION['success']);
+                                    }
+                            ?>
                             <br>
                             <button id="submit-button" type="submit">Submit</button>
                         </form>
