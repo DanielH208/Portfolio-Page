@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
 html {
   font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 
 main {
@@ -21,7 +22,14 @@ input {
 }
 
 h1 {
-  padding: 20px 10px;
+  padding: 20px 0px;
+}
+
+input, textarea {
+  padding-inline-start: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 footer {
@@ -46,6 +54,12 @@ footer h3 {
   border-radius: 5px;
 }
 
+#about-me-info {
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
 #about-me-scroll-down > h3 {
   font-size: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -62,7 +76,7 @@ footer h3 {
 .portfolio-row-item > img {
   width: 100%;
   object-fit: cover;
-  height: 80%;
+  height: 50%;
   border-radius: 3px 3px 0px 0px;
 }
 
@@ -71,9 +85,23 @@ footer h3 {
   font-size: 20px;
 }
 
+.portfolio-row-item > p {
+  padding: 0px 10px;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
 #form-info > h1 {
   font-size: 32px;
   padding: 0px;
+}
+
+#form-info > a {
+  color: white;
+}
+
+#form-info > p {
+  word-break: normal;
 }
 
 .scion-column > h1 {
@@ -93,11 +121,22 @@ footer h3 {
 }
 
 #portfolio-row li:hover {
-  filter: brightness(50%);
+  margin-top: 0px;
+  margin-bottom: 40px;
+  background-color: #242735;
+}
+
+.view-project-link:hover {
+  filter: brightness(75%);
+}
+
+#submit-button:hover {
+  background-color: #b2b2b2;
 }
 
 html {
   font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 
 main {
@@ -115,7 +154,14 @@ input {
 }
 
 h1 {
-  padding: 20px 10px;
+  padding: 20px 0px;
+}
+
+input, textarea {
+  padding-inline-start: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 footer {
@@ -140,6 +186,12 @@ footer h3 {
   border-radius: 5px;
 }
 
+#about-me-info {
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
 #about-me-scroll-down > h3 {
   font-size: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -156,7 +208,7 @@ footer h3 {
 .portfolio-row-item > img {
   width: 100%;
   object-fit: cover;
-  height: 80%;
+  height: 50%;
   border-radius: 3px 3px 0px 0px;
 }
 
@@ -165,9 +217,23 @@ footer h3 {
   font-size: 20px;
 }
 
+.portfolio-row-item > p {
+  padding: 0px 10px;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
 #form-info > h1 {
   font-size: 32px;
   padding: 0px;
+}
+
+#form-info > a {
+  color: white;
+}
+
+#form-info > p {
+  word-break: normal;
 }
 
 .scion-column > h1 {
@@ -247,6 +313,10 @@ footer h3 {
   padding: 40px 20px;
 }
 
+#scion-container {
+  padding: 40px 10px;
+}
+
 #about-me {
   width: 100%;
   height: 100vh;
@@ -270,6 +340,33 @@ footer h3 {
   transform: translate(-50%, -50%);
 }
 
+#coding-icons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#coding-icons-container > li {
+  text-align: center;
+  margin: 0px 13px;
+}
+
+#about-me-extended {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.about-me-columns {
+  width: 100%;
+  flex-grow: 1;
+}
+
+#about-me-extended-container {
+  background-color: #292b37;
+  padding: 20px;
+}
+
 #scion, #form-section-container, #portfolio-row {
   display: flex;
   flex-direction: row;
@@ -290,12 +387,20 @@ footer h3 {
 
 .portfolio-row-item {
   flex-grow: 1;
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 0px 0px 20px 0px;
   margin: 0px 0px 20px 0px;
   background-color: #1a1c26;
-  border-radius: 0px 0px 3px 3px;
+  border-radius: 6px;
+  height: 600px;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.view-project-link {
+  bottom: 10px;
 }
 
 #form-section-container, #portfolio-row, #scion {
@@ -319,7 +424,6 @@ footer h3 {
 }
 
 #scion-container {
-  padding: 40px;
   background-color: #292b37;
 }
 
@@ -333,8 +437,13 @@ footer h3 {
   width: 100%;
 }
 
+#javascript-val-image {
+  max-width: 600px !important;
+}
+
 .slide-content {
   width: 100%;
+  height: 1120px;
   background-color: #1a1c26;
   border-radius: 6px;
 }
@@ -343,6 +452,19 @@ footer h3 {
   padding: 0px;
   margin: 10px;
   width: 90%;
+}
+
+pre, code {
+  height: 450px;
+}
+
+.code-content-container {
+  margin-top: -7px;
+}
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+  color: white;
+  font-size: 14px;
 }
 
 .slide-content > img {
@@ -357,6 +479,77 @@ footer h3 {
 
 .slick-dots {
   color: white;
+}
+
+/*
+body::-webkit-scrollbar {
+    scrollbar-color: grey black;
+}
+
+::-webkit-scrollbar {
+    background: grey;
+    width: 10px;
+  }
+
+  Style the scrollbar handle 
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: grey;}
+
+*/
+#coding-examples {
+  /* Styling the scrollbar in Chrome */
+  /* Styling the scrollbar in Firefox */
+  /* Styling the scrollbar in Safari */
+}
+#coding-examples ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+#coding-examples ::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+#coding-examples ::-webkit-scrollbar-corner {
+  display: none;
+}
+#coding-examples ::-moz-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+#coding-examples ::-moz-scrollbar-thumb {
+  background-color: #ccc;
+}
+#coding-examples ::-moz-scrollbar-corner {
+  display: none;
+}
+#coding-examples ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+#coding-examples ::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+#coding-examples ::-webkit-scrollbar-corner {
+  display: none;
+}
+
+#about-me-extended-p2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.about-me-columns-p2 {
+  width: 100%;
+  flex-grow: 1;
+}
+
+#about-me-extended-container-p2 {
+  background-color: #292b37;
+  padding: 20px;
 }
 
 .arrow-down {
@@ -405,11 +598,51 @@ footer h3 {
   color: black;
 }
 
+#submit-button {
+  padding-bottom: 10px;
+}
+
 #sidenav-social > a > img {
   display: inline;
   width: 20px;
   padding: 20px 10px;
   filter: invert(27%) sepia(94%) saturate(459%) hue-rotate(86deg) brightness(98%) contrast(93%);
+}
+
+#coding-icons-container i, #coding-icons-container img {
+  width: 64px;
+}
+
+.fa-python {
+  color: #156615;
+}
+
+.fa-square-js {
+  color: #93821e;
+}
+
+.fa-html5 {
+  color: #ac4e06;
+}
+
+.fa-css3 {
+  color: #6997f4;
+}
+
+.fa-cloud-arrow-up {
+  color: #0d7190;
+}
+
+.fa-react {
+  color: #1398a3;
+}
+
+.fa-jira {
+  color: #0d4aa8;
+}
+
+.fa-github {
+  color: black;
 }
 
 #sidenav-header > a {
@@ -438,7 +671,7 @@ footer h3 {
 }
 
 .portfolio-row-item > a {
-  font-size: 10px;
+  font-size: 16px;
   color: #e8e6e3;
 }
 
@@ -446,9 +679,35 @@ footer h3 {
   padding-left: 10px;
 }
 
+.portfolio-project-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.view-project-link {
+  position: absolute;
+  text-decoration: underline 2px;
+  text-underline-offset: 4px;
+  z-index: 1000;
+  bottom: 10px;
+}
+.view-project-link :first-child {
+  text-decoration: underline 2px;
+  text-underline-offset: 4px;
+}
+
 #about-treehouse > p > a {
   color: #e8e6e3;
   overflow-wrap: break-word;
+  text-decoration: underline;
+}
+
+.about-me-columns a {
+  color: white;
   text-decoration: underline;
 }
 
@@ -459,6 +718,11 @@ footer a {
   width: 120px;
 }
 
+@media (max-width: 380px) {
+  .slide-content > p {
+    font-size: 13.6px;
+  }
+}
 @media (min-width: 576px) {
   #sidenav {
     display: block !important;
@@ -478,7 +742,7 @@ footer a {
   #about-me-content-container > h1 {
     font-size: 50px;
   }
-  #about-me-content-container > h2 {
+  #about-me-content-container > h2, #about-me-info {
     font-size: 30px;
   }
   #about-me-content-container > h3 {
@@ -490,12 +754,21 @@ footer a {
   #about-me button {
     display: none;
   }
+  #about-me-extended-container {
+    padding: 60px 40px 60px 40px;
+  }
+  .portfolio-row-item > p {
+    font-size: 17px;
+  }
+  #scion-container {
+    padding: 40px 20px;
+  }
 }
 @media (max-width: 575px) {
   #about-me-content-container > h1 {
     font-size: 30px;
   }
-  #about-me-content-container > h2 {
+  #about-me-content-container > h2, #about-me-info {
     font-size: 20px;
   }
   #about-me-content-container > h3 {
@@ -518,11 +791,23 @@ footer a {
   #about-me-content-container > h1 {
     font-size: 60px;
   }
-  #about-me-content-container > h2 {
+  #about-me-content-container > h2, #about-me-info {
     font-size: 35px;
   }
   #about-me-content-container > h3 {
     font-size: 25px;
+  }
+  #about-me-overview {
+    margin-right: 20px;
+  }
+  .portfolio-row-item > p {
+    font-size: 15px;
+  }
+  .portfolio-row-item {
+    max-width: 48.2%;
+  }
+  .slide-content > p {
+    font-size: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -554,7 +839,7 @@ footer a {
   #about-me-content-container > h1 {
     font-size: 60px;
   }
-  #about-me-content-container > h2 {
+  #about-me-content-container > h2, #about-me-info {
     font-size: 40px;
   }
   #about-me-content-container > h3 {
@@ -564,9 +849,25 @@ footer a {
     font-size: 42px;
   }
   #slides {
-    width: 750px;
+    width: 780px;
     margin-left: auto;
     margin-right: auto;
+  }
+  #about-me-extended {
+    flex-direction: row;
+  }
+  .portfolio-row-item > p {
+    font-size: 17px;
+  }
+  .slide-content {
+    width: 370px !important;
+    margin-left: 20px;
+  }
+  .slick-dots {
+    margin-left: 10px;
+  }
+  .slide-content > p {
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -596,7 +897,7 @@ footer a {
   #about-me-content-container > h1 {
     font-size: 70px;
   }
-  #about-me-content-container > h2 {
+  #about-me-content-container > h2, #about-me-info {
     font-size: 45px;
   }
   #about-me-content-container > h3 {
@@ -609,11 +910,17 @@ footer a {
     font-size: 50px;
   }
   #slides {
-    width: 1000px;
+    width: 1020px;
   }
   .slide-content {
     width: 490px !important;
-    margin-left: 10px;
+    margin-left: 20px;
+  }
+  .portfolio-row-item > p {
+    font-size: 16px;
+  }
+  .portfolio-row-item {
+    max-width: 32%;
   }
 }
 @media (min-width: 1600px) {
@@ -626,7 +933,7 @@ footer a {
   #about-me-content-container > h1 {
     font-size: 70px;
   }
-  #about-me-content-container > h2 {
+  #about-me-content-container > h2, #about-me-info {
     font-size: 50px;
   }
   #about-me-content-container > h3 {
@@ -641,6 +948,18 @@ footer a {
   .slide-content {
     width: 630px !important;
     margin-left: 20px;
+  }
+  .portfolio-row-item > p {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1800px) {
+  #slides {
+    width: 1500px;
+  }
+  .slide-content {
+    width: 480px !important;
+    height: 1020px;
   }
 }
 

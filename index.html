@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Daniel Higgins portfolio">
+        <meta name="keywords" content="Daniel, Higgins, Software, Software developer, HTML, CSS, JavaScript">
+        <meta name="author" content="Daniel Higgins">
         <title>Daniel Higgins Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/Capturedsds-removebg-preview.png">
+        <link rel="stylesheet" href="js/slick/slick.css">
+        <link rel="stylesheet" href="js/slick/slick-theme.css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/application.css">
         <link rel="stylesheet" href="css/hamburgers.css">
         <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/slick.css">
-        <link rel="stylesheet" href="css/slick-theme.css">
+        <link href="css/prism.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7cba581338.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/application.css">
     </head>
-    <body>
+    <body class="line-numbers"  data-prismjs-copy-timeout="500">
         <div id="sidenav" class="animate__animated">
             <div id="sidenav-header">
                 <a href="#"><h1>DH</h1></a>
             </div>
             <div id="sidenav-options">
-                <a href="#about-me">About Me</a>
+                <a href="about.html#about-me-extended-container">About Me</a>
                 <a href="#portfolio">My Portfolio</a>
                 <a href="#coding-examples">Coding Examples</a>
                 <a href="#scion">SCS Scheme</a>
             </div>
             <a href="#form-section-container" id="sidenav-options-contact"><strong>Contact Me</strong></a>
             <div id="sidenav-social">
-                <a href="https://www.linkedin.com/in/danielhiggins20/"><img src="assets/linkedin.svg"></a>
-                <a href="https://github.com/DanielH208"><img src="assets/github.svg"></a>
+                <a href="https://www.linkedin.com/in/danielhiggins20/" target="_blank"><img src="assets/linkedin.svg" alt="Linkedin logo"></a>
+                <a href="https://github.com/DanielH208" target="_blank"><img src="assets/github.svg" alt="Github logo"></a>
             </div>
         </div>
         <main>
@@ -32,32 +39,27 @@
                 <button class="hamburger hamburger--slider" type="button">
                     <span class="hamburger-box">
                       <span class="hamburger-inner"></span>
-                    </span>
-                  </button>
-                <img id="about-me-image-container" src="assets/codebackground.jpg">
+                    </span>    
+                </button>
+                <img id="about-me-image-container" src="assets/codebackground.jpg" alt="Image of rows of binary code">
                 <div id="about-me-content-container">
-                    <h1>My Name Is Daniel Higgins</h1>          
-                    <h2>
-                        <div  id="about-me-info" 
-                            tw-text="
+                    <h1>My Name Is Daniel Higgins</h1>                       
+                    <div id="about-me-info" 
+                        data-info="
                             I am a enthusiastic hard working software developer.
                             I enjoy working across the whole development stack and learning new coding languages and techniques.
-                            I have a few months work experience as a professional junior software developer as well as lots of courses and certifications.
-                            Ive been coding in my spare time and at school for years. 
-                            I have a large project called GasGuru its a crypto currency transaction price predictor.
-                            Ive been working on it for close to two years its close to being up and running.
-                            You can see it below in my portfolio.">
-                        </div> 
-                        <noscript>
-                            I am a enthusiastic hard working software developer.
-                            I enjoy working across the whole development stack and learning new coding languages and techniques.
-                            I have a few months work experience as a professional junior software developer as well as lots of courses and certifications.
-                            Ive been coding in my spare time and at school for years. 
-                            I have a large project called GasGuru its a crypto currency transaction price predictor.
-                            Ive been working on it for close to two years its close to being up and running.
-                            You can see it below in my portfolio.
-                        </noscript>    
-                    </h2>
+                            I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
+                        ">
+                    </div> 
+                    <noscript>
+                        <h2>
+                        I am a enthusiastic hard working software developer.
+                        I enjoy working across the whole development stack and learning new coding languages and techniques.
+                        I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
+                        </h2>
+                    </noscript>    
+                        
+          
                 </div>
                 <div id="about-me-scroll-down">
                     <h3>Scroll Down</h3>
@@ -69,34 +71,54 @@
                     <h1>Portfolio</h1>
                     <ul id="portfolio-row">
                         <li id="portfolio-row-item-one" class="portfolio-row-item">
-                            <img src="assets/projectplaceholder.JPG">
-                            <h4>Project One</h4>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="portfolio-project-link" href="#"></a>
+                            <img src="assets/Gasguru.JPG" alt="Image of Gasguru website template">
+                            <h4>GasGuru </h4>
+                            <p>
+                                Data processing and prediction web app for Cryptocurrency transaction fee / gas. Back end written in Python using the Pandas library to 
+                                manipulate and analyse JSON data from an external REST API. Custom Flask REST API feeds predication and real time data to the front-end React web app.
+                            </p>
+                            <a class="view-project-link" href="https://github.com/DanielH208/GasGuruExample" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-two" class="portfolio-row-item">
-                            <img src="assets/projectplaceholder.JPG">
-                            <h4>Project Two</h4>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="portfolio-project-link" href="https://js-array.daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
+                            <img src="assets/JavaScriptArrays.JPG" alt="Image of JavaScript Arrays webpage">
+                            <h4>JavaScript Arrays</h4>
+                            <p>
+                                Webpage that pulls down a random image using fetch from a external API. User can then enter an email address which if it passes validation the 
+                                image is assigned to a UL for the corresponding email address. If validation fails a custom error message pops up explaining why the email
+                                failed validation.
+                            </p>
+                            <a class="view-project-link" href="https://github.com/DanielH208/JavaScript-Arrays" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-three" class="portfolio-row-item">
-                            <img src="assets/projectplaceholder.JPG">
-                            <h4>Project Three</h4>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="portfolio-project-link"  href="https://netmatters.daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
+                            <img src="assets/Netmatters.JPG" alt="Image of webpage designed for Netmatters homepage">
+                            <h4>Netmatters homepage</h4>
+                            <p>
+                                Hand written homepage for Netmatters homepage. Covers all sections essential for a effective homepage with various user interactive elements and responsive styling.
+                                Site is optimised for all device sizes with dynamic styling providing a clean and visually appealing website.
+                            </p>
+                            <a class="view-project-link" href="https://github.com/DanielH208/example_homepage" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-four" class="portfolio-row-item">
-                            <img src="assets/projectplaceholder.JPG">
-                            <h4>Project Four</h4>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="portfolio-project-link" href="#"></a>
+                            <img src="assets/CdStore.JPG" alt="Image of h2 database for java cd store api">
+                            <h4>Java CD store REST API</h4>
+                            <p>
+                                Cloud based database using a REST API to manage stock/inventory of a CD store. This makes CRUD commands easier then managing
+                                the inventory using physical files. Unit and intergration tested to a high coverage level. Developed with detailed Jira storyboard using storypoints.
+                            </p>
+                            <a class="view-project-link" href="https://github.com/DanielH208/CD-Store-API" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                         <li id="portfolio-row-item-five" class="portfolio-row-item">
-                            <img src="assets/projectplaceholder.JPG">
-                            <h4>Project Five</h4>
-                            <a href="#">View Project &rarr;</a>
-                        </li>
-                        <li id="portfolio-row-item-six" class="portfolio-row-item">
-                            <img src="assets/projectplaceholder.JPG">
-                            <h4>Project Six</h4>
-                            <a href="#">View Project &rarr;</a>
+                            <a class="portfolio-project-link" href="https://daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
+                            <img src="assets/portfolio.JPG" alt="Placeholder image for upcoming portfolio project image">
+                            <h4>Portfolio(currently on)</h4>
+                            <p>
+                                Portfolio website built using JavaScript, Jquery, HTML, SCSS.
+                            </p>
+                            <a class="view-project-link" href="https://github.com/DanielH208/Portfolio-Page" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -106,27 +128,144 @@
                 <div id="coding-examples">
                     <div id="slides">
                         <div class="slide-content">
-                            <img src="assets/coding-examples/form-validation.JPG">
+                            <div class="code-content-container">
+                                <pre class="line-numbers"><code class="language-python">
+from flask import Flask
+from flask_cors import CORS
+from GasGuruPredictorApi import getBestHours
+from GasGuruPredictorApi import getCurrentValues
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route('/hello/', methods=['GET', 'POST'])
+def welcome():
+    return hello
+
+@app.route("/getBestHours/", defaults={ "price_weight": 0.8, "time_weight": 0.2})
+@app.route('/getBestHours/&lt;float:price_weight>/&lt;float:time_weight>', methods=['GET', 'POST'], )
+def returnBestHours(price_weight: float, time_weight: float):
+    return getBestHours(price_weight, time_weight)
+
+@app.route("/getCurrentValues", methods=['GET'])
+def returnCurrentValues():
+    return getCurrentValues() 
+                                </code></pre>   
+                            </div>
+                            <h1>GasGuru Flask REST API </h1>
+                            <p>
+                                GasGuru flask API for feeding data to the React front end web app. Two GET requests, getBestHours returns best hour to 
+                                send transactions in and getCurrentValues returns the current data to the closest minute.
+                                <br>
+                                <br>
+                                The interactable slider on the React web app allows the user to send a custom GET request with their own 
+                                price and time weight split. This in turn sends the best hour for that user to send transactions in based off
+                                matching the best hour that corellates with the specific time weight split.
+
+                            </p>
+                            <p>Skills: SCSS . CSS</p>
+                        </div>
+                        <div class="slide-content">
+                            <!--<img id="javascript-val-image" src="assets/coding-examples/form-validation.JPG" alt="Image of custom JavaScript validation">-->
+                            <div class="code-content-container">
+                                <pre class="line-numbers"><code data-prismjs-copy="Copy the JavaScript snippet!" class="language-javascript">                                   
+function regexPassOrFail(regex, input, field) {
+    if (regex.test(input)) {
+        field.css("border-color", "transparent");
+    } else {
+        field.css("border-color", "red");
+    }
+}
+
+function empty(input, field) {
+    if (input == "") {
+        field.css("border-color", "red");
+    } else {
+        field.css("border-color", "transparent");
+    }
+}
+
+$("#submit-button").click((event) => {
+    event.preventDefault(); 
+
+    let userEmailInput = $("#form-email").val();
+    let emailField = $("#form-email");
+    const emailRegex = new RegExp(/^\w+([\.-]?\w+)
+    *@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    regexPassOrFail(emailRegex, userEmailInput, emailField);
+
+
+    const nameRegex = new RegExp(/^[A-Za-z]+$/);
+    let firstNameInput= $("#form-firstname").val();
+    let firstNameField = $("#form-firstname");
+    
+    let lastNameInput= $("#form-lastname").val();
+    let lastNameField = $("#form-lastname");
+
+    let textareaInput = $("#form-textarea").val();
+    let textareaField = $("#form-textarea");
+
+    empty(firstNameInput, firstNameField);
+    empty(lastNameInput, lastNameField);
+    empty(textareaInput, textareaField);
+    regexPassOrFail(nameRegex, firstNameInput, firstNameField);
+    regexPassOrFail(nameRegex, lastNameInput, lastNameField);
+})
+                                </code></pre>
+                            </div>
                             <h1>Form Validation</h1>
-                            <p>Custom JavaScript form validation for a contact me form from portfolio</p>
+                            <p>
+                                Custom JavaScript / JQeuery form validation for a contact me form 
+                                from my portfolio website. This validation checks for wrong input 
+                                types as well as fields being left empty by the user. If validation fails
+                                the input box is highlighted red giving the user a visual cue that they entered
+                                an invalid input. The validation is stored in two functions so it can be easily called on different 
+                                input fields if needed in the future. Regex validation function can be used with any 
+                                different regex expression in the future easily by just setting and testing a new expression. 
+                                The empty function can easily be applied to any input boxs in the future giving the webpage
+                                a consistent default error checking.
+                            </p>
                              <p>Skills: JavaScript . Jquery</p>
                         </div>
                         <div class="slide-content">
-                            <img src="assets/coding-examples/form-validation.JPG">
-                            <h1>Form Validation</h1>
-                            <p>Custom JavaScript form validation for a contact me form from portfolio</p>
-                             <p>Skills: JavaScript . Jquery</p>
+                            <div class="code-content-container">
+                                <pre class="line-numbers"><code data-prismjs-copy="Copy the JavaScript snippet!" class="language-scss">
+@mixin button ($width, $colour, $border-colour) {
+    width: $width;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding: 10px 5px;
+    border: solid 6px;
+    background-color: $colour;
+    border-color: $border-colour;
+    border-radius: 15px;
+}
+                                </code></pre>   
+                            </div>
+                            <h1>Button Mixin</h1>
+                            <p>
+                                Custom button mixin for applying easy default styling to buttons. I decided to use
+                                a mixin for the buttons as it makes creating buttons with matching styling much easier
+                                which gives the  webpage a more uniformed look. 
+                                <br>
+                                <br>
+                                The mixin works like a function call
+                                where you call the mixin within the css selector you want and pass in the parameters values
+                                in the order they are set within the mixin. A mixin offers flexability as you can overide 
+                                any of the default set value with your own custom values. Such as changing the colour to make
+                                certain buttons more distinct. If the user doesnt pass in all the parameters then the values
+                                are simply just not set say you dont want to declare a width for the button leaving it on default.
+
+                            </p>
+                            <p>Skills: SCSS . CSS</p>
                         </div>
-                        <div class="slide-content">
-                            <img src="assets/coding-examples/form-validation.JPG">
-                            <h1>Form Validation</h1>
-                            <p>Custom JavaScript form validation for a contact me form from portfolio</p>
-                             <p>Skills: JavaScript . Jquery</p>
-                        </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
-            <div id="scion-container" class="container">
+            <div id="scion-container">
                 <h1>SCS Scheme</h1>
                 <div id="scion">      
                     <div id="scion-intro" class="scion-column">
@@ -176,17 +315,13 @@
                     <div id="form-info" class="form-section">
                         <h1>Get In Touch</h1>
                         <p>
-                            vfivneivnfeivnefivkefnvifenvefvmefovmefv
-                            vmefivmefiovmefopvmefopvefmovpefmvopef
-                            v,efoivmefiovmefiovpefmviopefmfopevmeove
+                            If you want to conntact me about any work 
+                            opportunities or to connect me about something
+                            work related below is my mobile phone number
+                            and email address
                         </p>
-                        <h2>549059 549545490</h2>
-                        <h2>daniel.higgins7@btinternet.com</h2>
-                        <p>
-                            emferifmsklmwospdfmwofwifnwiufnwiofnwifown
-                            wfnwifnw8ifnw8iofwnfiownfiownfiowfniwofniw
-                            fmwiofnwifonwifownfiownfiownfiowfnwiofnwiof
-                        </p>
+                        <a href="tel:+447729356209"><h2>07729 356209</h2></a>
+                        <a href="mailto:daniel.higgins7@btinternet.com"><h2>daniel.higgins7@btinternet.com</h2></a>
                     </div>
                     <div id="form-container" class="form-section">
                         <form>
@@ -194,7 +329,7 @@
                             <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*" maxlength="30" required>
                             <input class="form-elements" id="form-email" type="text" placeholder="Email Address*" required>
                             <input class="form-elements" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" class="form-elements" type="text" placeholder="Message*" rows="4" required></textarea>
+                            <textarea id="form-textarea" class="form-elements" placeholder="Message*" rows="4" required></textarea>
                             <br>
                             <input id="submit-button" type="submit" value="Submit">
                         </form>
@@ -212,7 +347,8 @@
         </footer>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/aeo-typewriter.js"></script>
-    <script src="js/slick.js"></script>
+    <script src="js/slick/slick.js"></script>
+    <script src="js/prism.js"></script>
     <script src="js/app.js"></script>
     
     </body>

@@ -10,8 +10,19 @@
 
 .portfolio-row-item {
     flex-grow: 1;
+    position: relative;
     @include mixin.size(100%, 100%, 0px 0px 20px 0px, 0px 0px 20px 0px);
     background-color: #1a1c26;
-    border-radius: 0px 0px 3px 3px;
+    //border-radius: 0px 0px 3px 3px;
+    border-radius: 6px;
+    height: 600px;
+    margin-top: 20px;
+    transition: 0.5s;
   
+}
+
+
+.view-project-link {
+    bottom: 10px;
+
 }

@@ -12,6 +12,7 @@ $main-background: black;
 
 html {
   font-family: "Poppins";
+  scroll-behavior: smooth; 
 }
 
 main {
@@ -30,7 +31,14 @@ input {
 }
 
 h1 {
-  padding: 20px 10px;
+  padding: 20px 0px;
+}
+
+input, textarea {
+  padding-inline-start: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 
@@ -59,6 +67,11 @@ footer h3 {
     background-color: rgba(0,0,0,0.5);
     border-radius: 5px;  
   }
+  #about-me-info {
+    font-size: 50px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;  
+  }
   
   
   #about-me-scroll-down > h3 {
@@ -83,13 +96,19 @@ footer h3 {
 .portfolio-row-item > img {
     width: 100%;
     object-fit: cover;
-    height: 80%;
+    height: 50%;
     border-radius: 3px 3px 0px 0px;
 }
   
-.portfolio-row-item > h4 {
+.portfolio-row-item> h4 {
     margin: 5px 0px;
     font-size: 20px;
+}
+
+.portfolio-row-item > p {
+  padding: 0px 10px;
+  font-size: 14px;
+  margin-bottom: 0px;
 }
 
 #form-info > h1 {
@@ -97,6 +116,15 @@ footer h3 {
   padding: 0px;
 }
 
+
+// FORM 
+#form-info > a {
+  color: white;
+}
+
+#form-info > p {
+  word-break: normal;
+}
 
 // CODING EXAMPLES
 

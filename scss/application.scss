@@ -1,7 +1,14 @@
-@import "style";
+@import "base/index";
+@import "layout/index";
+@import "components/index";
 
 // MEDIA QUERIES
 
+@media (max-width: 380px) {
+  .slide-content > p {
+    font-size: 13.6px;
+  }
+}
 @media (min-width: 576px) {
     #sidenav {
       display: block !important;
@@ -21,7 +28,7 @@
     #about-me-content-container > h1 { 
       font-size: 50px;
     }
-    #about-me-content-container > h2 { 
+    #about-me-content-container > h2, #about-me-info { 
       font-size: 30px;
     }
     #about-me-content-container > h3 { 
@@ -33,6 +40,15 @@
     #about-me button {
       display: none;
     }
+    #about-me-extended-container {
+      padding: 60px 40px 60px 40px;
+    }
+    .portfolio-row-item > p {
+      font-size: 17px;
+    }
+    #scion-container {
+      padding: 40px 20px;
+    }
 
   }
 
@@ -40,7 +56,7 @@
   #about-me-content-container > h1 { 
     font-size: 30px;
   }
-  #about-me-content-container > h2 { 
+  #about-me-content-container > h2, #about-me-info { 
     font-size: 20px;
   }
   #about-me-content-container > h3 { 
@@ -51,8 +67,7 @@
   }
   h2 {
     margin-top: 0px;
-  }
-  
+  } 
 }
 
 @media (min-width: 768px) {
@@ -65,11 +80,23 @@
   #about-me-content-container > h1 { 
     font-size: 60px;
   }
-  #about-me-content-container > h2 { 
+  #about-me-content-container > h2, #about-me-info { 
     font-size: 35px;
   }
   #about-me-content-container > h3 { 
     font-size: 25px;
+  }
+  #about-me-overview {
+    margin-right: 20px;
+  }
+  .portfolio-row-item > p {
+    font-size: 15px;
+  }
+  .portfolio-row-item {
+    max-width: 48.2%;
+  }
+  .slide-content > p {
+    font-size: 20px;
   }
 }
 
@@ -102,7 +129,7 @@
   #about-me-content-container > h1 { 
     font-size: 60px;
   }
-  #about-me-content-container > h2 { 
+  #about-me-content-container > h2, #about-me-info { 
     font-size: 40px;
   }
   #about-me-content-container > h3 { 
@@ -112,11 +139,26 @@
     font-size: 42px;
   }
   #slides { 
-    width: 750px;
+    width: 780px;
     margin-left: auto;
     margin-right: auto;
   }
-
+  #about-me-extended {
+    flex-direction: row;
+  }
+  .portfolio-row-item > p {
+    font-size: 17px;
+  }
+  .slide-content { 
+    width: 370px !important;
+    margin-left: 20px;
+  }
+  .slick-dots {
+    margin-left: 10px;
+  }
+  .slide-content > p {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -146,7 +188,7 @@
   #about-me-content-container > h1 { 
     font-size: 70px;
   }
-  #about-me-content-container > h2 { 
+  #about-me-content-container > h2, #about-me-info { 
     font-size: 45px;
   }
   #about-me-content-container > h3 { 
@@ -159,14 +201,20 @@
     font-size: 50px;
   }
   #slides { 
-    width: 1000px;
+    width: 1020px;
   }
   .slide-content { 
     width: 490px !important;
-    margin-left: 10px;
+    margin-left: 20px;
   }
-
+  .portfolio-row-item > p {
+    font-size: 16px;
+  }
+  .portfolio-row-item {
+    max-width: 32%;
+  }
 }
+
 
 @media (min-width: 1600px) {
   #form-section-container {
@@ -178,7 +226,7 @@
   #about-me-content-container > h1 { 
     font-size:70px;
   }
-  #about-me-content-container > h2 { 
+  #about-me-content-container > h2, #about-me-info { 
     font-size: 50px;
   }
   #about-me-content-container > h3 { 
@@ -194,6 +242,18 @@
     width: 630px !important;
     margin-left: 20px;
   }
+  .portfolio-row-item > p {
+    font-size: 19px;
+  }
+}
 
+@media (min-width: 1800px) {
+  #slides {
+    width: 1500px;
+  }
+  .slide-content {
+    width: 480px !important;
+    height: 1020px;
+  }
 }
   
