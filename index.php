@@ -1,3 +1,97 @@
+<?php 
+
+    session_start();
+    
+    if (!isset($_SESSION['success'])) {
+        $_SESSION['success'] = false;
+    }
+    if (!isset($_SESSION['errMsg'])) {
+        $_SESSION['errMsg'] = '';
+    }
+   
+    function santise_input($data) {
+        $data = htmlspecialchars($data);
+        $data = trim($data);
+        $data = stripslashes($data);
+        return $data;
+    }
+
+    function validate_input($data, $input, $regex=true) {
+        if (empty($data) == true) {
+            $_SESSION['errMsg'] = $input . " has no value";
+            //$_SESSION[$input ."-valid"] = false;
+            return false;
+        }
+        else if ($regex == false) {
+            $_SESSION['errMsg'] = $data . " is not a valid " . $input;
+            //$_SESSION[$input ."-valid"] = false;
+            return false;
+        }
+        //$_SESSION[$input ."-valid"] = true;
+        return true;
+    }
+
+    function debug_to_console($data, $context = 'Debug in Console') {
+
+        // Buffering to solve problems frameworks, like header() in this and not a solid return.
+        ob_start();
+
+        $output  = 'console.info(\'' . $context . ':\');';
+        $output .= 'console.log(' . json_encode($data) . ');';
+        $output  = sprintf('<script>%s</script>', $output);
+
+        echo $output;
+    } 
+
+
+    include 'php/sendMessage.php';
+    
+
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        // Filter out any invalid or malicious inputs and store form values inside corresponding variables
+        $_SESSION['first-name'] = santise_input($_POST["first-name"]);
+        $_SESSION['last-name'] = santise_input($_POST["last-name"]);
+        $_SESSION['email'] = santise_input($_POST["email"]);
+        $_SESSION['subject'] = santise_input($_POST["subject"]);;
+        $_SESSION['message'] = santise_input($_POST["message"]);
+
+
+
+        // Session variables for storing whether an input is valid 
+        //$_SESSION['name-valid'] = true;
+        //$_SESSION["email-valid"] = true;
+        //$_SESSION["telephone number-valid"] = true;
+        //$_SESSION["message-valid"] = true;
+
+
+        // If all inputs are validated to true call function to send data to database
+        if (
+            validate_input($_SESSION['first-name'],"first name", preg_match("/^[a-zA-Z-' ]*$/", $_SESSION['first-name']))  && 
+            validate_input($_SESSION['last-name'],"last name", preg_match("/^[a-zA-Z-' ]*$/", $_SESSION['last-name'])) &&
+            validate_input($_SESSION['email'], "email", filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL)) && 
+            validate_input($_SESSION['message'], "message")
+            ) 
+            {
+            sendData($_SESSION['first-name'], $_SESSION['last-name'], $_SESSION['email'], $_SESSION['subject'], $_SESSION['message']);
+            unset($_SESSION['first-name']);
+            unset($_SESSION['last-name']);
+            unset($_SESSION['email']);
+            unset($_SESSION['subject']);
+            unset($_SESSION['message']);
+            echo ("success");
+            debug_to_console("success");
+            $_SESSION['success'] = true;
+            $_SESSION['errMsg'] = '';
+        } 
+        header('Location: index.php#submit-button');
+        exit();
+        debug_to_console("fail");
+        echo ("fail");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -279,14 +373,14 @@ $("#submit-button").click((event) => {
                         <a href="mailto:daniel.higgins7@btinternet.com"><h2>daniel.higgins7@btinternet.com</h2></a>
                     </div>
                     <div id="form-container" class="form-section">
-                        <form>
-                            <input id="form-firstname" class="form-elements" type="text" placeholder="First Name*" maxlength="20" required>
-                            <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*" maxlength="30" required>
-                            <input class="form-elements" id="form-email" type="text" placeholder="Email Address*" required>
-                            <input class="form-elements" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" class="form-elements" placeholder="Message*" rows="4" required></textarea>
+                        <form action="index.php" method="post" onsubmit="return validateInputs()">
+                            <input id="form-firstname" name="first-name" class="form-elements" type="text" placeholder="First Name*" maxlength="20">
+                            <input id="form-lastname" name="last-name" class="form-elements" type="text" placeholder="Last Name*" maxlength="30">
+                            <input class="form-elements" name="email" id="form-email" type="text" placeholder="Email Address*">
+                            <input class="form-elements" name="subject" type="text" placeholder="Subject">
+                            <textarea id="form-textarea" name ="message" class="form-elements" placeholder="Message*" rows="4"></textarea>
                             <br>
-                            <input id="submit-button" type="submit" value="Submit">
+                            <button id="submit-button" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
