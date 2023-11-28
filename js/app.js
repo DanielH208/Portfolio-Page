@@ -45,21 +45,25 @@ $("#about-me button").on('click', function() {
 function regexPassOrFail(regex, input, field) {
     if (regex.test(input)) {
         field.css("border-color", "transparent");
+        return true
     } else {
         field.css("border-color", "red");
+        return false
     }
 }
 
 function empty(input, field) {
     if (input == "") {
         field.css("border-color", "red");
+        return false
     } else {
         field.css("border-color", "transparent");
+        return true
     }
 }
 
-$("#submit-button").click((event) => {
-    event.preventDefault(); 
+function validateInputs() {
+    //event.preventDefault(); 
 
     let userEmailInput = $("#form-email").val();
     let emailField = $("#form-email");
@@ -82,7 +86,20 @@ $("#submit-button").click((event) => {
     empty(textareaInput, textareaField);
     regexPassOrFail(nameRegex, firstNameInput, firstNameField);
     regexPassOrFail(nameRegex, lastNameInput, lastNameField);
-})
+
+    if (
+        empty(firstNameInput, firstNameField) &&
+        empty(lastNameInput, lastNameField) &&
+        empty(textareaInput, textareaField) &&
+        regexPassOrFail(nameRegex, firstNameInput, firstNameField) &&
+        regexPassOrFail(nameRegex, lastNameInput, lastNameField) 
+    ) {
+        return true;
+    } 
+    else {
+        return false;
+    }
+}
 
 $("#slides").slick({
     slidesToShow: 3,

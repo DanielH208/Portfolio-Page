@@ -1,3 +1,93 @@
+<?php 
+
+    session_start();
+    
+    if (!isset($_SESSION['success'])) {
+        $_SESSION['success'] = false;
+    }
+    if (!isset($_SESSION['errMsg'])) {
+        $_SESSION['errMsg'] = '';
+    }
+   
+    function santise_input($data) {
+        $data = htmlspecialchars($data);
+        $data = trim($data);
+        $data = stripslashes($data);
+        return $data;
+    }
+
+    function validate_input($data, $input, $regex=true) {
+        if (empty($data) == true) {
+            $_SESSION['errMsg'] = $input . " has no value";
+            //$_SESSION[$input ."-valid"] = false;
+            return false;
+        }
+        else if ($regex == false) {
+            $_SESSION['errMsg'] = $data . " is not a valid " . $input;
+            //$_SESSION[$input ."-valid"] = false;
+            return false;
+        }
+        //$_SESSION[$input ."-valid"] = true;
+        return true;
+    }
+
+    function debug_to_console($data, $context = 'Debug in Console') {
+
+        // Buffering to solve problems frameworks, like header() in this and not a solid return.
+        ob_start();
+
+        $output  = 'console.info(\'' . $context . ':\');';
+        $output .= 'console.log(' . json_encode($data) . ');';
+        $output  = sprintf('<script>%s</script>', $output);
+
+        echo $output;
+    } 
+
+
+    include 'php/sendMessage.php';
+    
+
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        // Filter out any invalid or malicious inputs and store form values inside corresponding variables
+        $_SESSION['first-name'] = santise_input($_POST["first-name"]);
+        $_SESSION['last-name'] = santise_input($_POST["last-name"]);
+        $_SESSION['email'] = santise_input($_POST["email"]);
+        $_SESSION['subject'] = santise_input($_POST["subject"]);;
+        $_SESSION['message'] = santise_input($_POST["message"]);
+
+
+
+        // Session variables for storing whether an input is valid 
+        //$_SESSION['name-valid'] = true;
+        //$_SESSION["email-valid"] = true;
+        //$_SESSION["telephone number-valid"] = true;
+        //$_SESSION["message-valid"] = true;
+
+
+        // If all inputs are validated to true call function to send data to database
+        if (
+            validate_input($_SESSION['first-name'],"first name", preg_match("/^[a-zA-Z-' ]*$/", $_SESSION['first-name']))  && 
+            validate_input($_SESSION['last-name'],"last name", preg_match("/^[a-zA-Z-' ]*$/", $_SESSION['last-name'])) &&
+            validate_input($_SESSION['email'], "email", filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL)) && 
+            validate_input($_SESSION['message'], "message")
+            ) 
+            {
+            sendData($_SESSION['first-name'], $_SESSION['last-name'], $_SESSION['email'], $_SESSION['subject'], $_SESSION['message']);
+            unset($_SESSION['first-name']);
+            unset($_SESSION['last-name']);
+            unset($_SESSION['email']);
+            unset($_SESSION['subject']);
+            unset($_SESSION['message']);
+            $_SESSION['success'] = true;
+            $_SESSION['errMsg'] = '';
+        } 
+        header('Location: index.php#submit-button');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,54 +108,9 @@
         <link rel="stylesheet" href="css/application.css">
     </head>
     <body class="line-numbers"  data-prismjs-copy-timeout="500">
-        <div id="sidenav" class="animate__animated">
-            <div id="sidenav-header">
-                <a href="#"><h1>DH</h1></a>
-            </div>
-            <div id="sidenav-options">
-                <a href="about.html#about-me-extended-container">About Me</a>
-                <a href="#portfolio">My Portfolio</a>
-                <a href="#coding-examples">Coding Examples</a>
-                <a href="#scion">SCS Scheme</a>
-            </div>
-            <a href="#form-section-container" id="sidenav-options-contact"><strong>Contact Me</strong></a>
-            <div id="sidenav-social">
-                <a href="https://www.linkedin.com/in/danielhiggins20/" target="_blank"><img src="assets/linkedin.svg" alt="Linkedin logo"></a>
-                <a href="https://github.com/DanielH208" target="_blank"><img src="assets/github.svg" alt="Github logo"></a>
-            </div>
-        </div>
+        <?php include("php/sidenav.php"); ?>
         <main>
-            <div id="about-me">
-                <button class="hamburger hamburger--slider" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>    
-                </button>
-                <img id="about-me-image-container" src="assets/codebackground.jpg" alt="Image of rows of binary code">
-                <div id="about-me-content-container">
-                    <h1>My Name Is Daniel Higgins</h1>                       
-                    <div id="about-me-info" 
-                        data-info="
-                            I am a enthusiastic hard working software developer.
-                            I enjoy working across the whole development stack and learning new coding languages and techniques.
-                            I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
-                        ">
-                    </div> 
-                    <noscript>
-                        <h2>
-                        I am a enthusiastic hard working software developer.
-                        I enjoy working across the whole development stack and learning new coding languages and techniques.
-                        I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
-                        </h2>
-                    </noscript>    
-                        
-          
-                </div>
-                <div id="about-me-scroll-down">
-                    <h3>Scroll Down</h3>
-                    <i class="arrow-down"></i>
-                </div>
-            </div>
+            <?php include("php/aboutSummary.php"); ?>
             <div class="container">
                 <div id="portfolio">
                     <h1>Portfolio</h1>
@@ -324,14 +369,27 @@ $("#submit-button").click((event) => {
                         <a href="mailto:daniel.higgins7@btinternet.com"><h2>daniel.higgins7@btinternet.com</h2></a>
                     </div>
                     <div id="form-container" class="form-section">
-                        <form>
-                            <input id="form-firstname" class="form-elements" type="text" placeholder="First Name*" maxlength="20" required>
-                            <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*" maxlength="30" required>
-                            <input class="form-elements" id="form-email" type="text" placeholder="Email Address*" required>
-                            <input class="form-elements" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" class="form-elements" placeholder="Message*" rows="4" required></textarea>
+                        <form action="index.php" method="post" onsubmit="return validateInputs()">
+                            <input id="form-firstname" name="first-name" class="form-elements" type="text" placeholder="First Name *" maxlength="30">
+                            <input id="form-lastname" name="last-name" class="form-elements" type="text" placeholder="Last Name *" maxlength="30">
+                            <input class="form-elements" name="email" id="form-email" type="text" placeholder="Email Address *">
+                            <input class="form-elements" name="subject" type="text" placeholder="Subject">
+                            <textarea id="form-textarea" name ="message" class="form-elements" placeholder="Message *" rows="4"></textarea>
                             <br>
-                            <input id="submit-button" type="submit" value="Submit">
+                            <span class="enquiry-error<?php if ($_SESSION['errMsg']) echo '-active' ?>">
+                                    <?php
+                                        echo $_SESSION['errMsg'];
+                                        unset($_SESSION['errMsg']);
+                                        ?>
+                                    </span>
+                            <?php
+                                    if ($_SESSION['success']) {
+                                        echo "<span class='enquiry-success-message'>Thank you for your message</span>";
+                                        unset($_SESSION['success']);
+                                    }
+                            ?>
+                            <br>
+                            <button id="submit-button" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>

@@ -113,6 +113,14 @@ footer h3 {
   font-size: 20px;
 }
 
+.enquiry-error-active {
+  color: red !important;
+}
+
+.enquiry-success-message {
+  color: green !important;
+}
+
 #sidenav-options a:hover {
   text-decoration: underline;
   text-decoration-color: #0b7029;
@@ -243,6 +251,14 @@ footer h3 {
 
 .scion-column > p {
   font-size: 20px;
+}
+
+.enquiry-error-active {
+  color: red !important;
+}
+
+.enquiry-success-message {
+  color: green !important;
 }
 
 #sidenav {
