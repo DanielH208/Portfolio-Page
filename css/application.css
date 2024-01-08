@@ -113,6 +113,14 @@ footer h3 {
   font-size: 20px;
 }
 
+.enquiry-error-active {
+  color: red !important;
+}
+
+.enquiry-success-message {
+  color: green !important;
+}
+
 #sidenav-options a:hover {
   text-decoration: underline;
   text-decoration-color: #0b7029;
@@ -245,6 +253,14 @@ footer h3 {
   font-size: 20px;
 }
 
+.enquiry-error-active {
+  color: red !important;
+}
+
+.enquiry-success-message {
+  color: green !important;
+}
+
 #sidenav {
   display: none;
   width: 130px;
@@ -309,8 +325,8 @@ footer h3 {
   border-radius: 3px;
 }
 
-.container {
-  padding: 40px 20px;
+.containers {
+  padding: 40px 20px !important;
 }
 
 #scion-container {
@@ -600,6 +616,7 @@ body::-webkit-scrollbar {
 
 #submit-button {
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 #sidenav-social > a > img {
@@ -736,7 +753,7 @@ footer a {
     margin-left: 130px;
     filter: brightness(100%) !important;
   }
-  .container {
+  .containers {
     padding: 40px 40px;
   }
   #about-me-content-container > h1 {
@@ -780,6 +797,10 @@ footer a {
   h2 {
     margin-top: 0px;
   }
+  #portfolio-row {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 @media (min-width: 768px) {
   .portfolio-row-item {
@@ -811,7 +832,7 @@ footer a {
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .containers {
     padding: 80px 40px;
   }
   .scion-column {

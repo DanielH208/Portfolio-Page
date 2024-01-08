@@ -1,3 +1,93 @@
+<?php 
+
+    session_start();
+    
+    if (!isset($_SESSION['success'])) {
+        $_SESSION['success'] = false;
+    }
+    if (!isset($_SESSION['errMsg'])) {
+        $_SESSION['errMsg'] = '';
+    }
+   
+    function santise_input($data) {
+        $data = htmlspecialchars($data);
+        $data = trim($data);
+        $data = stripslashes($data);
+        return $data;
+    }
+
+    function validate_input($data, $input, $regex=true) {
+        if (empty($data) == true) {
+            $_SESSION['errMsg'] = $input . " has no value";
+            //$_SESSION[$input ."-valid"] = false;
+            return false;
+        }
+        else if ($regex == false) {
+            $_SESSION['errMsg'] = $data . " is not a valid " . $input;
+            //$_SESSION[$input ."-valid"] = false;
+            return false;
+        }
+        //$_SESSION[$input ."-valid"] = true;
+        return true;
+    }
+
+    function debug_to_console($data, $context = 'Debug in Console') {
+
+        // Buffering to solve problems frameworks, like header() in this and not a solid return.
+        ob_start();
+
+        $output  = 'console.info(\'' . $context . ':\');';
+        $output .= 'console.log(' . json_encode($data) . ');';
+        $output  = sprintf('<script>%s</script>', $output);
+
+        echo $output;
+    } 
+
+
+    include 'php/sendMessage.php';
+    
+
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        // Filter out any invalid or malicious inputs and store form values inside corresponding variables
+        $_SESSION['first-name'] = santise_input($_POST["first-name"]);
+        $_SESSION['last-name'] = santise_input($_POST["last-name"]);
+        $_SESSION['email'] = santise_input($_POST["email"]);
+        $_SESSION['subject'] = santise_input($_POST["subject"]);;
+        $_SESSION['message'] = santise_input($_POST["message"]);
+
+
+
+        // Session variables for storing whether an input is valid 
+        //$_SESSION['name-valid'] = true;
+        //$_SESSION["email-valid"] = true;
+        //$_SESSION["telephone number-valid"] = true;
+        //$_SESSION["message-valid"] = true;
+
+
+        // If all inputs are validated to true call function to send data to database
+        if (
+            validate_input($_SESSION['first-name'],"first name", preg_match("/^[a-zA-Z-' ]*$/", $_SESSION['first-name']))  && 
+            validate_input($_SESSION['last-name'],"last name", preg_match("/^[a-zA-Z-' ]*$/", $_SESSION['last-name'])) &&
+            validate_input($_SESSION['email'], "email", filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL)) && 
+            validate_input($_SESSION['message'], "message")
+            ) 
+            {
+            sendData($_SESSION['first-name'], $_SESSION['last-name'], $_SESSION['email'], $_SESSION['subject'], $_SESSION['message']);
+            unset($_SESSION['first-name']);
+            unset($_SESSION['last-name']);
+            unset($_SESSION['email']);
+            unset($_SESSION['subject']);
+            unset($_SESSION['message']);
+            $_SESSION['success'] = true;
+            $_SESSION['errMsg'] = '';
+        } 
+        header('Location: index.php#submit-button');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,59 +104,18 @@
         <link rel="stylesheet" href="css/hamburgers.css">
         <link rel="stylesheet" href="css/animate.css">
         <link href="css/prism.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.rtl.css" rel="stylesheet">
+        <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7cba581338.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/application.css">
     </head>
     <body class="line-numbers"  data-prismjs-copy-timeout="500">
-        <div id="sidenav" class="animate__animated">
-            <div id="sidenav-header">
-                <a href="#"><h1>DH</h1></a>
-            </div>
-            <div id="sidenav-options">
-                <a href="about.html#about-me-extended-container">About Me</a>
-                <a href="#portfolio">My Portfolio</a>
-                <a href="#coding-examples">Coding Examples</a>
-                <a href="#scion">SCS Scheme</a>
-            </div>
-            <a href="#form-section-container" id="sidenav-options-contact"><strong>Contact Me</strong></a>
-            <div id="sidenav-social">
-                <a href="https://www.linkedin.com/in/danielhiggins20/" target="_blank"><img src="assets/linkedin.svg" alt="Linkedin logo"></a>
-                <a href="https://github.com/DanielH208" target="_blank"><img src="assets/github.svg" alt="Github logo"></a>
-            </div>
-        </div>
+        <?php include("php/sidenav.php"); ?>
         <main>
-            <div id="about-me">
-                <button class="hamburger hamburger--slider" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>    
-                </button>
-                <img id="about-me-image-container" src="assets/codebackground.jpg" alt="Image of rows of binary code">
-                <div id="about-me-content-container">
-                    <h1>My Name Is Daniel Higgins</h1>                       
-                    <div id="about-me-info" 
-                        data-info="
-                            I am a enthusiastic hard working software developer.
-                            I enjoy working across the whole development stack and learning new coding languages and techniques.
-                            I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
-                        ">
-                    </div> 
-                    <noscript>
-                        <h2>
-                        I am a enthusiastic hard working software developer.
-                        I enjoy working across the whole development stack and learning new coding languages and techniques.
-                        I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
-                        </h2>
-                    </noscript>    
-                        
-          
-                </div>
-                <div id="about-me-scroll-down">
-                    <h3>Scroll Down</h3>
-                    <i class="arrow-down"></i>
-                </div>
-            </div>
-            <div class="container">
+            <?php include("php/aboutSummary.php"); ?>
+            <div class="containers">
                 <div id="portfolio">
                     <h1>Portfolio</h1>
                     <ul id="portfolio-row">
@@ -76,7 +125,8 @@
                             <h4>GasGuru </h4>
                             <p>
                                 Data processing and prediction web app for Cryptocurrency transaction fee / gas. Back end written in Python using the Pandas library to 
-                                manipulate and analyse JSON data from an external REST API. Custom Flask REST API feeds predication and real time data to the front-end React web app.
+                                manipulate and analyse JSON data from an external REST API. Custom Flask REST API feeds predication and real time data to the front-end React web app.<br>
+                                <span class="badge text-bg-primary">HTML5 & CSS</span> <span class="badge text-bg-success">Python</span> <span class="badge text-bg-warning">JavaScript</span> <span class="badge text-bg-light">React</span> <span class="badge text-bg-danger">SQL</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/GasGuruExample" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
@@ -87,7 +137,8 @@
                             <p>
                                 Webpage that pulls down a random image using fetch from a external API. User can then enter an email address which if it passes validation the 
                                 image is assigned to a UL for the corresponding email address. If validation fails a custom error message pops up explaining why the email
-                                failed validation.
+                                failed validation.<br> 
+                                <span class="badge text-bg-primary">HTML5 & CSS & SCSS</span> <span class="badge text-bg-warning">JavaScript</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/JavaScript-Arrays" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
@@ -97,7 +148,8 @@
                             <h4>Netmatters homepage</h4>
                             <p>
                                 Hand written homepage for Netmatters homepage. Covers all sections essential for a effective homepage with various user interactive elements and responsive styling.
-                                Site is optimised for all device sizes with dynamic styling providing a clean and visually appealing website.
+                                Site is optimised for all device sizes with dynamic styling providing a clean and visually appealing website.<br>
+                                <span class="badge text-bg-primary">HTML5 & CSS & SCSS</span> <span class="badge text-bg-warning">JavaScript</span> <span class="badge text-bg-info">PHP</span> <span class="badge text-bg-danger">SQL</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/example_homepage" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
@@ -107,23 +159,15 @@
                             <h4>Java CD store REST API</h4>
                             <p>
                                 Cloud based database using a REST API to manage stock/inventory of a CD store. This makes CRUD commands easier then managing
-                                the inventory using physical files. Unit and intergration tested to a high coverage level. Developed with detailed Jira storyboard using storypoints.
+                                the inventory using physical files. Unit and intergration tested to a high coverage level. Developed with detailed Jira storyboard using storypoints.<br>
+                                <span class="badge text-bg-secondary">Java</span> <span class="badge text-bg-danger">SQL</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/CD-Store-API" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
-                        </li>
-                        <li id="portfolio-row-item-five" class="portfolio-row-item">
-                            <a class="portfolio-project-link" href="https://daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
-                            <img src="assets/portfolio.JPG" alt="Placeholder image for upcoming portfolio project image">
-                            <h4>Portfolio(currently on)</h4>
-                            <p>
-                                Portfolio website built using JavaScript, Jquery, HTML, SCSS.
-                            </p>
-                            <a class="view-project-link" href="https://github.com/DanielH208/Portfolio-Page" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="container">
+            <div class="containers">
                 <h1>Coding Examples</h1>
                 <div id="coding-examples">
                     <div id="slides">
@@ -163,7 +207,7 @@ def returnCurrentValues():
                                 matching the best hour that corellates with the specific time weight split.
 
                             </p>
-                            <p>Skills: SCSS . CSS</p>
+                            <p><span class="badge text-bg-success">Python</span> <span class="badge text-bg-success">Flask</span></p>
                         </div>
                         <div class="slide-content">
                             <!--<img id="javascript-val-image" src="assets/coding-examples/form-validation.JPG" alt="Image of custom JavaScript validation">-->
@@ -225,7 +269,7 @@ $("#submit-button").click((event) => {
                                 The empty function can easily be applied to any input boxs in the future giving the webpage
                                 a consistent default error checking.
                             </p>
-                             <p>Skills: JavaScript . Jquery</p>
+                             <p><span class="badge text-bg-warning">JavaScript</span> <span class="badge text-bg-warning">Jquery</span></p>
                         </div>
                         <div class="slide-content">
                             <div class="code-content-container">
@@ -260,7 +304,7 @@ $("#submit-button").click((event) => {
                                 are simply just not set say you dont want to declare a width for the button leaving it on default.
 
                             </p>
-                            <p>Skills: SCSS . CSS</p>
+                            <p><span class="badge text-bg-primary">SCSS</span></p>
                         </div>
                     </div>  
                 </div>
@@ -309,7 +353,7 @@ $("#submit-button").click((event) => {
                     </div>                  
                 </div>
             </div>
-            <div class="container">
+            <div class="containers">
                 <h1>Contact Me</h1>
                 <div id="form-section-container">
                     <div id="form-info" class="form-section">
@@ -324,14 +368,27 @@ $("#submit-button").click((event) => {
                         <a href="mailto:daniel.higgins7@btinternet.com"><h2>daniel.higgins7@btinternet.com</h2></a>
                     </div>
                     <div id="form-container" class="form-section">
-                        <form>
-                            <input id="form-firstname" class="form-elements" type="text" placeholder="First Name*" maxlength="20" required>
-                            <input id="form-lastname" class="form-elements" type="text" placeholder="Last Name*" maxlength="30" required>
-                            <input class="form-elements" id="form-email" type="text" placeholder="Email Address*" required>
-                            <input class="form-elements" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" class="form-elements" placeholder="Message*" rows="4" required></textarea>
+                        <form action="index.php" method="post" onsubmit="return validateInputs()">
+                            <input id="form-firstname" name="first-name" class="form-elements" type="text" placeholder="First Name *" maxlength="30" value="<?= $_SESSION['first-name'] ?? '' ?>">
+                            <input id="form-lastname" name="last-name" class="form-elements" type="text" placeholder="Last Name *" maxlength="30" value="<?= $_SESSION['last-name'] ?? '' ?>">
+                            <input class="form-elements" name="email" id="form-email" type="text" placeholder="Email Address *" value="<?= $_SESSION['email'] ?? '' ?>">
+                            <input class="form-elements" name="subject" type="text" placeholder="Subject" value="<?= $_SESSION['subject'] ?? '' ?>">
+                            <textarea id="form-textarea" name ="message" class="form-elements" placeholder="Message *" rows="4"><?= $_SESSION['message'] ?? '' ?></textarea>
                             <br>
-                            <input id="submit-button" type="submit" value="Submit">
+                            <span class="enquiry-error<?php if ($_SESSION['errMsg']) echo '-active' ?>">
+                                    <?php
+                                        echo $_SESSION['errMsg'];
+                                        unset($_SESSION['errMsg']);
+                                        ?>
+                                    </span>
+                            <?php
+                                    if ($_SESSION['success']) {
+                                        echo "<span class='enquiry-success-message'>Thank you for your message</span>";
+                                        unset($_SESSION['success']);
+                                    }
+                            ?>
+                            <br>
+                            <button id="submit-button" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
