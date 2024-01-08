@@ -22,7 +22,7 @@
       margin-left: 130px;
       filter: brightness(100%) !important;
     }
-    .container {
+    .containers {
       padding: 40px 40px;
     }
     #about-me-content-container > h1 { 
@@ -68,6 +68,10 @@
   h2 {
     margin-top: 0px;
   } 
+  #portfolio-row {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -101,7 +105,7 @@
 }
 
 @media (min-width: 992px) {
-  .container {
+  .containers {
     padding: 80px 40px;
   }
   .scion-column {

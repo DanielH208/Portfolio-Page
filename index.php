@@ -104,6 +104,10 @@
         <link rel="stylesheet" href="css/hamburgers.css">
         <link rel="stylesheet" href="css/animate.css">
         <link href="css/prism.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.rtl.css" rel="stylesheet">
+        <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7cba581338.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/application.css">
     </head>
@@ -111,7 +115,7 @@
         <?php include("php/sidenav.php"); ?>
         <main>
             <?php include("php/aboutSummary.php"); ?>
-            <div class="container">
+            <div class="containers">
                 <div id="portfolio">
                     <h1>Portfolio</h1>
                     <ul id="portfolio-row">
@@ -121,7 +125,8 @@
                             <h4>GasGuru </h4>
                             <p>
                                 Data processing and prediction web app for Cryptocurrency transaction fee / gas. Back end written in Python using the Pandas library to 
-                                manipulate and analyse JSON data from an external REST API. Custom Flask REST API feeds predication and real time data to the front-end React web app.
+                                manipulate and analyse JSON data from an external REST API. Custom Flask REST API feeds predication and real time data to the front-end React web app.<br>
+                                <span class="badge text-bg-primary">HTML5 & CSS</span> <span class="badge text-bg-success">Python</span> <span class="badge text-bg-warning">JavaScript</span> <span class="badge text-bg-light">React</span> <span class="badge text-bg-danger">SQL</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/GasGuruExample" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
@@ -132,7 +137,8 @@
                             <p>
                                 Webpage that pulls down a random image using fetch from a external API. User can then enter an email address which if it passes validation the 
                                 image is assigned to a UL for the corresponding email address. If validation fails a custom error message pops up explaining why the email
-                                failed validation.
+                                failed validation.<br> 
+                                <span class="badge text-bg-primary">HTML5 & CSS & SCSS</span> <span class="badge text-bg-warning">JavaScript</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/JavaScript-Arrays" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
@@ -142,7 +148,8 @@
                             <h4>Netmatters homepage</h4>
                             <p>
                                 Hand written homepage for Netmatters homepage. Covers all sections essential for a effective homepage with various user interactive elements and responsive styling.
-                                Site is optimised for all device sizes with dynamic styling providing a clean and visually appealing website.
+                                Site is optimised for all device sizes with dynamic styling providing a clean and visually appealing website.<br>
+                                <span class="badge text-bg-primary">HTML5 & CSS & SCSS</span> <span class="badge text-bg-warning">JavaScript</span> <span class="badge text-bg-info">PHP</span> <span class="badge text-bg-danger">SQL</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/example_homepage" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
@@ -152,23 +159,15 @@
                             <h4>Java CD store REST API</h4>
                             <p>
                                 Cloud based database using a REST API to manage stock/inventory of a CD store. This makes CRUD commands easier then managing
-                                the inventory using physical files. Unit and intergration tested to a high coverage level. Developed with detailed Jira storyboard using storypoints.
+                                the inventory using physical files. Unit and intergration tested to a high coverage level. Developed with detailed Jira storyboard using storypoints.<br>
+                                <span class="badge text-bg-secondary">Java</span> <span class="badge text-bg-danger">SQL</span>
                             </p>
                             <a class="view-project-link" href="https://github.com/DanielH208/CD-Store-API" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
-                        </li>
-                        <li id="portfolio-row-item-five" class="portfolio-row-item">
-                            <a class="portfolio-project-link" href="https://daniel-higgins.netmatters-scs.co.uk/" target="_blank"></a>
-                            <img src="assets/portfolio.JPG" alt="Placeholder image for upcoming portfolio project image">
-                            <h4>Portfolio(currently on)</h4>
-                            <p>
-                                Portfolio website built using JavaScript, Jquery, HTML, SCSS.
-                            </p>
-                            <a class="view-project-link" href="https://github.com/DanielH208/Portfolio-Page" target="_blank">Github Repo <i class="fa-solid fa-arrow-right"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="container">
+            <div class="containers">
                 <h1>Coding Examples</h1>
                 <div id="coding-examples">
                     <div id="slides">
@@ -208,7 +207,7 @@ def returnCurrentValues():
                                 matching the best hour that corellates with the specific time weight split.
 
                             </p>
-                            <p>Skills: SCSS . CSS</p>
+                            <p><span class="badge text-bg-success">Python</span> <span class="badge text-bg-success">Flask</span></p>
                         </div>
                         <div class="slide-content">
                             <!--<img id="javascript-val-image" src="assets/coding-examples/form-validation.JPG" alt="Image of custom JavaScript validation">-->
@@ -270,7 +269,7 @@ $("#submit-button").click((event) => {
                                 The empty function can easily be applied to any input boxs in the future giving the webpage
                                 a consistent default error checking.
                             </p>
-                             <p>Skills: JavaScript . Jquery</p>
+                             <p><span class="badge text-bg-warning">JavaScript</span> <span class="badge text-bg-warning">Jquery</span></p>
                         </div>
                         <div class="slide-content">
                             <div class="code-content-container">
@@ -305,7 +304,7 @@ $("#submit-button").click((event) => {
                                 are simply just not set say you dont want to declare a width for the button leaving it on default.
 
                             </p>
-                            <p>Skills: SCSS . CSS</p>
+                            <p><span class="badge text-bg-primary">SCSS</span></p>
                         </div>
                     </div>  
                 </div>
@@ -354,7 +353,7 @@ $("#submit-button").click((event) => {
                     </div>                  
                 </div>
             </div>
-            <div class="container">
+            <div class="containers">
                 <h1>Contact Me</h1>
                 <div id="form-section-container">
                     <div id="form-info" class="form-section">
@@ -370,11 +369,11 @@ $("#submit-button").click((event) => {
                     </div>
                     <div id="form-container" class="form-section">
                         <form action="index.php" method="post" onsubmit="return validateInputs()">
-                            <input id="form-firstname" name="first-name" class="form-elements" type="text" placeholder="First Name *" maxlength="30">
-                            <input id="form-lastname" name="last-name" class="form-elements" type="text" placeholder="Last Name *" maxlength="30">
-                            <input class="form-elements" name="email" id="form-email" type="text" placeholder="Email Address *">
-                            <input class="form-elements" name="subject" type="text" placeholder="Subject">
-                            <textarea id="form-textarea" name ="message" class="form-elements" placeholder="Message *" rows="4"></textarea>
+                            <input id="form-firstname" name="first-name" class="form-elements" type="text" placeholder="First Name *" maxlength="30" value="<?= $_SESSION['first-name'] ?? '' ?>">
+                            <input id="form-lastname" name="last-name" class="form-elements" type="text" placeholder="Last Name *" maxlength="30" value="<?= $_SESSION['last-name'] ?? '' ?>">
+                            <input class="form-elements" name="email" id="form-email" type="text" placeholder="Email Address *" value="<?= $_SESSION['email'] ?? '' ?>">
+                            <input class="form-elements" name="subject" type="text" placeholder="Subject" value="<?= $_SESSION['subject'] ?? '' ?>">
+                            <textarea id="form-textarea" name ="message" class="form-elements" placeholder="Message *" rows="4"><?= $_SESSION['message'] ?? '' ?></textarea>
                             <br>
                             <span class="enquiry-error<?php if ($_SESSION['errMsg']) echo '-active' ?>">
                                     <?php

@@ -13,14 +13,12 @@ echo '
                 data-info="
                     I am a enthusiastic hard working software developer.
                     I enjoy working across the whole development stack and learning new coding languages and techniques.
-                    I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
                 ">
             </div> 
             <noscript>
                 <h2>
                 I am a enthusiastic hard working software developer.
                 I enjoy working across the whole development stack and learning new coding languages and techniques.
-                I have a few months work experience as a professional junior software developer as well as lots of completed courses, bootcamps and certifications.
                 </h2>
             </noscript>    
                 
